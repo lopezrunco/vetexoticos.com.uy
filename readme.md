@@ -61,3 +61,6 @@ In the Wordpress administrator go to Appearence => Menus and in "Navigation Labe
 ```html
     <i class="fas fa-home"></i> Sample page
 ```
+
+### Add Blog page:
+In the Wordpress administrator create a new page called "Blog". Then go to Settings => Reading and in "Your homepage displays" go to "Posts page" and select the Blog page.
