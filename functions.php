@@ -7,6 +7,18 @@ function starterwptheme_theme_support()
 }
 
 add_action('after_setup_theme', 'starterwptheme_theme_support');
+
+function starterwptheme_menus()
+{
+    $locations = array(
+        'primary' => "Desktop Primary Left Sidebar",
+        'footer' => "Footer Menu Items"
+    );
+    register_nav_menus($locations);
+}
+
+add_action('init', 'starterwptheme_menus');
+
 function starterwptheme_register_styles()
 {
     $version = wp_get_theme()->get('Version');

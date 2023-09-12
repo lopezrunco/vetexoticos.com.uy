@@ -47,5 +47,17 @@ That’s it – your local test site is now ready. Go to http://localhost/folder
 <hr>
 
 ### Add custom home page in Wordpress:
-In the wordpress administrator create a new page and then go to Settings => Reading. In "
+In the Wordpress administrator create a new page and then go to Settings => Reading. In "
 Your homepage displays" select "A static page" and select the page from the list.
+
+### Add menu items:
+In the Wordpress administrator create a new menu. Then create a few pages, add them to the menu and in "Menu Settings" go to "Display location" and select "Desktop Primary Left Sidebar".
+
+### Customize menu items classes:
+In the Wordpress administrator go to Appearence => Menus and in the top-right section click on the tab "Screen Options". In "Show advanced menu properties" check "Link Target" and "CSS Classes". Then go to the menu items and add the class "nav-item" in every one of them.
+
+### Add FontAwesome icons to the menus items:
+In the Wordpress administrator go to Appearence => Menus and in "Navigation Label" paste the icon alongside the menu item name, like this:
+```html
+    <i class="fas fa-home"></i> Sample page
+```
