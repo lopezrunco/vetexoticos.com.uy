@@ -43,3 +43,9 @@ Once done, hit Submit -> Run the installation. Fill in the additional informatio
 
 ### 6. Check the Local Site You Built
 That’s it – your local test site is now ready. Go to http://localhost/foldername/wp-admin and use the login credentials you created in the previous step to access the WordPress dashboard.
+
+<hr>
+
+### Add custom home page in Wordpress:
+In the wordpress administrator create a new page and then go to Settings => Reading. In "
+Your homepage displays" select "A static page" and select the page from the list.
