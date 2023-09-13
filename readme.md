@@ -64,3 +64,8 @@ In the Wordpress administrator go to Appearence => Menus and in "Navigation Labe
 
 ### Add Blog page:
 In the Wordpress administrator create a new page called "Blog". Then go to Settings => Reading and in "Your homepage displays" go to "Posts page" and select the Blog page.
+
+### Run SASS command:
+```sh
+    sass --watch scss/style.scss style.css
+```

@@ -1,0 +1,15 @@
+/* 
+Theme Name: Starter WP Theme
+Text Domain: Starter WP Theme
+Version: 1.0
+Description: Wordpress theme for a quick start in the development of corporate sites.
+Tags: responsive, theme, wordpress
+Author: Creativo Multimedia
+Author URI: https://creativo.com.uy/
+*/
+
+@import './Variables.scss';
+@import './header';
+@import './general';
+@import './blog';
+@import './footer';

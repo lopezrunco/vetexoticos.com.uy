@@ -1,0 +1,123 @@
+@import './Variables.scss';
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--sidebar-width);
+    background: var(--primary);
+    color: #fff;
+
+    .site-title {
+        color: var(--white);
+        font-size: 1.2em;
+        display: block;
+    }
+
+    .btn-primary {
+        background: rgba(0, 0, 0, 0.3);
+        border-color: transparent;
+        font-size: 1rem;
+        padding-top: 0.5rem;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.4);
+            border-color: transparent
+        }
+    }
+
+    .navbar {
+        padding: 2rem 1rem
+    }
+
+    .navbar-dark .navbar-toggler {
+        border: none;
+        padding: .25rem .6rem;
+
+        &:hover {
+            -webkit-opacity: 1;
+            -moz-opacity: 1;
+            opacity: 1
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    }
+
+    .nav-item {
+        font-weight: bold;
+
+        &.active a {
+            color: rgba(0, 0, 0, 0.5);
+
+            &:hover {
+                text-decoration: none
+            }
+        }
+
+        a {
+            color: rgba(255, 255, 255, 0.8);
+
+            &:hover {
+                text-decoration: underline;
+                color: rgba(0, 0, 0, 0.6)
+            }
+        }
+    }
+}
+
+.logo {
+    width: 78px;
+}
+
+.social-list a {
+    width: 32px;
+    height: 32px;
+    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+
+    &:hover {
+        color: var(--secondary);
+        background-color: rgba(255, 255, 255, 0.8)
+    }
+}
+
+@media (max-width: 991.98px) {
+    .page-title {
+        position: static;
+    }
+
+    .header {
+        position: sticky;
+        width: inherit;
+        height: auto;
+
+        .site-title {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 1.2rem;
+            color: var(--white);
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .btn-primary {
+            width: 100%
+        }
+
+        .navbar {
+            padding: 1rem
+        }
+    }
+
+    .main-wrapper {
+        margin-left: 0
+    }
+}
