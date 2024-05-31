@@ -4,8 +4,8 @@ Text Domain: Starter WP Theme
 Version: 1.0
 Description: Wordpress theme for a quick start in the development of corporate sites.
 Tags: responsive, theme, wordpress
-Author: Creativo Multimedia
-Author URI: https://creativo.com.uy/
+Author: Damian Lopez
+Author URI: https://damian-lopez.web.app/
 */
 :root {
   --blue: #007bff;
@@ -347,6 +347,20 @@ h6 {
 }
 .meta span:last-child:after {
   display: none;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
 }
 
 :root {

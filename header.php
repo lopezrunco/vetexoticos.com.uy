@@ -19,7 +19,7 @@
 <body>
 
     <header class="header text-center">
-        <a class="site-title pt-lg-4 mb-0" href="index.html">
+        <a class="site-title pt-lg-4 mb-0" href="index.php">
 
             <?php
             echo get_bloginfo('name');
