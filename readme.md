@@ -1,8 +1,4 @@
-# Starter Wordpress theme
-
-Wordpress theme for a quick start in the development of corporate sites.
-
-<small>By Creativo Multimedia</small> 
+# Vetexoticos pet shop Wordpress theme
 
 ## Instructions:
 
