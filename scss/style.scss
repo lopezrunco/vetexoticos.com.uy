@@ -1,15 +1,20 @@
 /* 
-Theme Name: Starter WP Theme
-Text Domain: Starter WP Theme
+Theme Name: Vetexoticos WP Theme
+Text Domain: Vetexoticos WP Theme
 Version: 1.0
-Description: Wordpress theme for a quick start in the development of corporate sites.
+Description: Vetexoticos pet shop Wordpress theme.
 Tags: responsive, theme, wordpress
-Author: Damian Lopez
+Author: Tecnomedios
 Author URI: https://damian-lopez.web.app/
 */
 
 @import './Variables.scss';
 @import './header';
+@import './hero';
 @import './general';
 @import './blog';
+@import './product-categories';
+@import './latest_products';
+@import './latest_news';
+@import './_bottom.scss';
 @import './footer';

@@ -1,10 +1,10 @@
 /* 
-Theme Name: Starter WP Theme
-Text Domain: Starter WP Theme
+Theme Name: Vetexoticos WP Theme
+Text Domain: Vetexoticos WP Theme
 Version: 1.0
-Description: Wordpress theme for a quick start in the development of corporate sites.
+Description: Vetexoticos pet shop Wordpress theme.
 Tags: responsive, theme, wordpress
-Author: Damian Lopez
+Author: Tecnomedios
 Author URI: https://damian-lopez.web.app/
 */
 :root {
@@ -43,6 +43,7 @@ Author URI: https://damian-lopez.web.app/
   /* Sidebar */
   --sidebar-width: 280px;
   --content-max-width: 1120px;
+  --border-radius: 5px;
 }
 
 :root {
@@ -81,6 +82,7 @@ Author URI: https://damian-lopez.web.app/
   /* Sidebar */
   --sidebar-width: 280px;
   --content-max-width: 1120px;
+  --border-radius: 5px;
 }
 
 .header {
@@ -157,6 +159,31 @@ Author URI: https://damian-lopez.web.app/
     object-fit: contain;
   }
 }
+.hero {
+  background-image: url("https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6rem 0;
+}
+.hero .content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero .content-wrapper h5,
+.hero .content-wrapper h2,
+.hero .content-wrapper a {
+  color: var(--white);
+  text-shadow: 4px 4px 18px rgba(0, 0, 0, 0.48);
+}
+
+@media screen and (min-width: 992px) {
+  .hero .content-wrapper {
+    width: 80%;
+  }
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -193,6 +220,7 @@ Author URI: https://damian-lopez.web.app/
   /* Sidebar */
   --sidebar-width: 280px;
   --content-max-width: 1120px;
+  --border-radius: 5px;
 }
 
 *,
@@ -211,7 +239,7 @@ body {
 }
 
 a {
-  color: var(--pink);
+  color: var(--primary);
 }
 
 h1,
@@ -367,6 +395,7 @@ h6 {
   /* Sidebar */
   --sidebar-width: 280px;
   --content-max-width: 1120px;
+  --border-radius: 5px;
 }
 
 .blog-nav a {
@@ -648,6 +677,126 @@ div.comment:first-of-type {
   text-decoration: underline;
 }
 
+.product-categories-container {
+  display: grid;
+  gap: 2rem;
+}
+.product-categories-container .product-category-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.product-categories-container .product-category-item-wrapper img {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+.product-categories-container .product-category-item-wrapper span {
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+@media screen and (min-width: 992px) {
+  .product-categories-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-categories-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.latest-products-container {
+  display: grid;
+  gap: 2rem;
+}
+.latest-products-container .product-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.latest-products-container .product-wrapper img {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+.latest-products-container .product-wrapper span {
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+@media screen and (min-width: 992px) {
+  .latest-products-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .latest-products-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.latest-news-container {
+  display: grid;
+  gap: 2rem;
+}
+.latest-news-container .new-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.latest-news-container .new-wrapper .post-thumbnail {
+  object-fit: cover;
+  width: 100%;
+}
+.latest-news-container .new-wrapper .post-thumbnail img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+.latest-news-container .new-wrapper .post-thumbnail span {
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+@media screen and (min-width: 992px) {
+  .latest-news-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .latest-news-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.bottom {
+  border-top: 1px solid var(--light);
+}
+.bottom .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 3rem;
+}
+.bottom .container .bottom-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.bottom .container .bottom-col img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .bottom .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -684,13 +833,14 @@ div.comment:first-of-type {
   /* Sidebar */
   --sidebar-width: 280px;
   --content-max-width: 1120px;
+  --border-radius: 5px;
 }
 
 .footer {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--lightgray);
 }
 .footer a {
-  color: #fff;
+  color: var(--lightgray);
 }
 
 /*# sourceMappingURL=style.css.map */
