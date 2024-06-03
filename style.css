@@ -11,9 +11,9 @@ Author URI: https://damian-lopez.web.app/
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
-  --pink: #ee3577;
+  --pink: #f95473;
   --red: #dc3545;
-  --orange: #f68e62;
+  --orange: #ffc130;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -21,7 +21,7 @@ Author URI: https://damian-lopez.web.app/
   --white: #fff;
   --gray: #767575;
   --gray-dark: #434242;
-  --primary: #6f42c1;
+  --primary: #222d87;
   --secondary: #4f4f4f;
   --success: #28a745;
   --info: #17a2b8;
@@ -42,16 +42,16 @@ Author URI: https://damian-lopez.web.app/
   --font-small: 0.8125rem;
   /* Sidebar */
   --sidebar-width: 280px;
-  --content-max-width: 860px;
+  --content-max-width: 1120px;
 }
 
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
-  --pink: #ee3577;
+  --pink: #f95473;
   --red: #dc3545;
-  --orange: #f68e62;
+  --orange: #ffc130;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -59,7 +59,7 @@ Author URI: https://damian-lopez.web.app/
   --white: #fff;
   --gray: #767575;
   --gray-dark: #434242;
-  --primary: #6f42c1;
+  --primary: #222d87;
   --secondary: #4f4f4f;
   --success: #28a745;
   --info: #17a2b8;
@@ -80,22 +80,14 @@ Author URI: https://damian-lopez.web.app/
   --font-small: 0.8125rem;
   /* Sidebar */
   --sidebar-width: 280px;
-  --content-max-width: 860px;
+  --content-max-width: 1120px;
 }
 
 .header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: var(--sidebar-width);
-  background: var(--primary);
-  color: #fff;
-}
-.header .site-title {
-  color: var(--white);
-  font-size: 1.2em;
-  display: block;
+  width: 100%;
+  background: var(--white);
+  color: var(--gray-dark);
+  border-bottom: 1px solid var(--light);
 }
 .header .btn-primary {
   background: rgba(0, 0, 0, 0.3);
@@ -108,7 +100,7 @@ Author URI: https://damian-lopez.web.app/
   border-color: transparent;
 }
 .header .navbar {
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 .header .navbar-dark .navbar-toggler {
   border: none;
@@ -119,11 +111,12 @@ Author URI: https://damian-lopez.web.app/
   -moz-opacity: 1;
   opacity: 1;
 }
-.header .navbar-dark .navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+.header .navbar-dark .navbar-toggler .menu-icon {
+  color: var(--gray-dark);
 }
 .header .nav-item {
   font-weight: bold;
+  padding: 0.5rem;
 }
 .header .nav-item.active a {
   color: rgba(0, 0, 0, 0.5);
@@ -132,7 +125,7 @@ Author URI: https://damian-lopez.web.app/
   text-decoration: none;
 }
 .header .nav-item a {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--gray-dark);
 }
 .header .nav-item a:hover {
   text-decoration: underline;
@@ -140,7 +133,7 @@ Author URI: https://damian-lopez.web.app/
 }
 
 .logo {
-  width: 78px;
+  width: 60%;
 }
 
 .social-list a {
@@ -158,43 +151,19 @@ Author URI: https://damian-lopez.web.app/
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width: 991.98px) {
-  .page-title {
-    position: static;
-  }
-
-  .header {
-    position: sticky;
-    width: inherit;
-    height: auto;
-  }
-  .header .site-title {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 1.2rem;
-    color: var(--white);
-    font-size: 1.5em;
-    display: block;
-  }
-  .header .btn-primary {
-    width: 100%;
-  }
-  .header .navbar {
-    padding: 1rem;
-  }
-
-  .main-wrapper {
-    margin-left: 0;
+@media (min-width: 991px) {
+  .logo {
+    max-height: 120px;
+    object-fit: contain;
   }
 }
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
-  --pink: #ee3577;
+  --pink: #f95473;
   --red: #dc3545;
-  --orange: #f68e62;
+  --orange: #ffc130;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -202,7 +171,7 @@ Author URI: https://damian-lopez.web.app/
   --white: #fff;
   --gray: #767575;
   --gray-dark: #434242;
-  --primary: #6f42c1;
+  --primary: #222d87;
   --secondary: #4f4f4f;
   --success: #28a745;
   --info: #17a2b8;
@@ -223,7 +192,7 @@ Author URI: https://damian-lopez.web.app/
   --font-small: 0.8125rem;
   /* Sidebar */
   --sidebar-width: 280px;
-  --content-max-width: 860px;
+  --content-max-width: 1120px;
 }
 
 *,
@@ -266,7 +235,7 @@ h6 {
 }
 
 .btn-primary {
-  color: #fff;
+  color: var(--white);
 }
 
 .theme-bg-light {
@@ -278,8 +247,7 @@ h6 {
 }
 
 .main-wrapper {
-  margin-left: var(--sidebar-width);
-  background: #fff;
+  background: var(--white);
 }
 .main-wrapper .container {
   max-width: var(--content-max-width);
@@ -302,7 +270,7 @@ h6 {
 }
 
 .gradient {
-  background: #2b2b2b;
+  background: rgb(43, 43, 43);
   background: linear-gradient(151deg, var(--orange) 0%, var(--pink) 35%, var(--primary) 100%) !important;
 }
 
@@ -367,9 +335,9 @@ h6 {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
-  --pink: #ee3577;
+  --pink: #f95473;
   --red: #dc3545;
-  --orange: #f68e62;
+  --orange: #ffc130;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -377,7 +345,7 @@ h6 {
   --white: #fff;
   --gray: #767575;
   --gray-dark: #434242;
-  --primary: #6f42c1;
+  --primary: #222d87;
   --secondary: #4f4f4f;
   --success: #28a745;
   --info: #17a2b8;
@@ -398,7 +366,7 @@ h6 {
   --font-small: 0.8125rem;
   /* Sidebar */
   --sidebar-width: 280px;
-  --content-max-width: 860px;
+  --content-max-width: 1120px;
 }
 
 .blog-nav a {
@@ -684,9 +652,9 @@ div.comment:first-of-type {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
-  --pink: #ee3577;
+  --pink: #f95473;
   --red: #dc3545;
-  --orange: #f68e62;
+  --orange: #ffc130;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -694,7 +662,7 @@ div.comment:first-of-type {
   --white: #fff;
   --gray: #767575;
   --gray-dark: #434242;
-  --primary: #6f42c1;
+  --primary: #222d87;
   --secondary: #4f4f4f;
   --success: #28a745;
   --info: #17a2b8;
@@ -715,7 +683,7 @@ div.comment:first-of-type {
   --font-small: 0.8125rem;
   /* Sidebar */
   --sidebar-width: 280px;
-  --content-max-width: 860px;
+  --content-max-width: 1120px;
 }
 
 .footer {
