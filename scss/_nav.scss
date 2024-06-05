@@ -1,0 +1,39 @@
+header {
+    nav {
+        border-bottom: 1px solid var(--light);
+
+        img.main-logo {
+            max-width: 200px;
+        }
+
+        form.searchform {
+            padding: 1rem ;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        nav {
+            form.searchform {
+                padding: 0;
+            }
+        }
+    }
+}
+
+// Bootstrap styles override
+
+header {
+    nav {
+        li.nav-item {
+            cursor: pointer;
+            padding: 1rem !important;
+            border-radius: var(--border-radius);
+
+            &:hover {
+                background-color: var(--lightgray);
+            }
+        }
+    }
+}

@@ -9,12 +9,14 @@ Author URI: https://damian-lopez.web.app/
 */
 
 @import './Variables.scss';
-@import './header';
-@import './hero';
 @import './general';
+@import './form';
+@import './top';
+@import './nav';
+@import './hero';
 @import './blog';
 @import './product-categories';
 @import './latest_products';
 @import './latest_news';
-@import './_bottom.scss';
+@import './bottom.scss';
 @import './footer';
