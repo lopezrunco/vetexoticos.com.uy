@@ -53,8 +53,8 @@ get_header();
 	</div>
 </div>
 
-<article class="content px-3 py-5 p-md-5">
-	<div class="container">
+<section class="bg-light">
+	<article class="container">
 		<?php
 		$product_categories = get_terms(array(
 			'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -62,7 +62,14 @@ get_header();
 			'order' => 'ASC',
 			'hide_empty' => true, // Hide empty categories
 		));
-		echo '<h3 class="text-center mb-5">Categorías</h3>';
+		echo '
+			<div class="section-title">
+				<h2>Categorías de producto</h2>
+				<p>
+					Todo lo que necesitas para el bienestar y felicidad de tus compañeros. Ofrecemos alimentos de alta calidad para una nutrición equilibrada, una variedad de juguetes para mantener a tus mascotas activas y entretenidas.
+				</p>
+			</div>
+		';
 		if (!empty($product_categories) && !is_wp_error($product_categories)) {
 			echo '<div class="product-categories-container">';
 			foreach ($product_categories as $category) {
@@ -74,12 +81,12 @@ get_header();
 
 				echo '<div class="product-category-item-wrapper">';
 				if ($image_url) {
-					echo '<a href="' . get_term_link($category) . '"><img src="' . esc_url($image_url) . '" alt="' . esc_attr($category->name) . '"></a>';
+					echo '<div class="image-wrapper"><a href="' . get_term_link($category) . '"><img src="' . esc_url($image_url) . '" alt="' . esc_attr($category->name) . '"></a></div>';
 				} else {
 					// If no image is found, output a default placeholder or message
 					echo '<a href="' . get_term_link($category) . '"><img src="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg" alt="No image available"></a>';
 				}
-				echo '<span><a href="' . get_term_link($category) . '">' . $category->name . '</a><span>';
+				echo '<h5><a href="' . get_term_link($category) . '">' . $category->name . '</a><h5>';
 				echo '</div>';
 			}
 			echo '</div>';
@@ -87,8 +94,8 @@ get_header();
 			echo '<p>No se encontraron categorias de producto.</p>';
 		}
 		?>
-	</div>
-</article>
+	</article>
+</section>
 
 <article class="content px-3 py-5 p-md-5">
 	<div class="container">

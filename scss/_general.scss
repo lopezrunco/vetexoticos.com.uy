@@ -17,6 +17,16 @@ body {
     font-family: var(--font-family);
 }
 
+section {
+    padding: 4rem 0;
+}
+
+@media screen and (min-width: 992px) {
+    section {
+        padding: 7rem 0;
+    }
+}
+
 // Bootstrap overrides
 .bg-dark {
     background: var(--gray-dark) !important;
@@ -44,6 +54,22 @@ body {
 
 .paws-overlay {
     background-image: url('./assets/images/paw-pattern.png');
+}
+
+.section-title {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .section-title {
+        width: 80%;
+    }
 }
 
 .page-title {
