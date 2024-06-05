@@ -20,6 +20,7 @@ Author URI: https://damian-lopez.web.app/
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
+  --darkwhite: #f8f9fa;
   --gray: #767575;
   --gray-dark: #434242;
   --primary: #222d87;
@@ -44,6 +45,7 @@ Author URI: https://damian-lopez.web.app/
   --sidebar-width: 280px;
   --content-max-width: 1120px;
   --border-radius: 4px;
+  --main-transition: all ease-in-out .25s;
 }
 
 :root {
@@ -58,6 +60,7 @@ Author URI: https://damian-lopez.web.app/
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
+  --darkwhite: #f8f9fa;
   --gray: #767575;
   --gray-dark: #434242;
   --primary: #222d87;
@@ -82,6 +85,7 @@ Author URI: https://damian-lopez.web.app/
   --sidebar-width: 280px;
   --content-max-width: 1120px;
   --border-radius: 4px;
+  --main-transition: all ease-in-out .25s;
 }
 
 *,
@@ -95,49 +99,21 @@ html {
 }
 
 body {
-  color: var(--secondary);
+  color: var(--gray);
   overflow-x: hidden;
   font-family: var(--font-family);
 }
 
-a {
-  color: var(--gray) !important;
-}
-a:hover {
-  color: var(--gray-dark) !important;
-  text-decoration: none !important;
+.bg-dark {
+  background: var(--gray-dark) !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--gray-dark);
-  font-weight: bold;
+.bg-primary {
+  background: var(--primary) !important;
 }
 
-.btn {
-  font-weight: bold;
-  padding: 0.375rem 1rem;
-  height: 2.75rem;
-  transition: all 0.4s ease-in-out;
-}
-.btn:focus, .btn.focus {
-  box-shadow: none !important;
-}
-
-.btn-primary {
-  color: var(--white);
-}
-
-.theme-bg-light {
-  background: var(--light) !important;
-}
-
-.theme-bg-dark {
-  background: var(--dark) !important;
+.text-light {
+  color: var(--darkwhite) !important;
 }
 
 .main-wrapper {
@@ -145,6 +121,14 @@ h6 {
 }
 .main-wrapper .container {
   max-width: var(--content-max-width);
+}
+
+.gray-overlay {
+  background-color: rgba(0, 0, 0, 0.3882352941);
+}
+
+.paws-overlay {
+  background-image: url("./assets/images/paw-pattern.png");
 }
 
 .page-title {
@@ -211,35 +195,108 @@ h6 {
   display: none;
 }
 
-.slider {
-  width: 100%;
-  overflow: hidden;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--gray-dark);
+  font-weight: 400;
 }
 
-.slide {
-  display: none;
+h1 {
+  font-size: 2.5rem;
 }
 
-.slide img {
-  width: 100%;
-  height: auto;
+h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+a {
+  color: var(--gray) !important;
+}
+a:hover {
+  color: var(--gray-dark) !important;
+  text-decoration: none !important;
+}
+
+.btn {
+  border-radius: 20px !important;
+  padding: 0.4rem 2rem !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  margin: 1rem 1rem 1rem 0 !important;
+  transition: var(--main-transition);
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+.btn-primary:hover, .btn-primary:active {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+.btn-secondary {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+.btn-secondary:hover, .btn-secondary:active {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+
+.btn-light {
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+  color: var(--gray) !important;
+}
+.btn-light:hover, .btn-light:active {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+
+.btn-dark {
+  background-color: var(--dark) !important;
+  border-color: var(--dark) !important;
+  color: var(--white) !important;
+}
+.btn-dark:hover, .btn-dark:active {
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+  color: var(--dark) !important;
 }
 
 form input {
   border: 1px solid var(--light);
   border-radius: var(--border-radius);
+  background-color: var(--darkwhite);
   outline: none;
-  color: var(--gray-dark);
+  color: var(--gray);
   padding: 0.3rem 1rem;
 }
 
 .top {
-  background-color: var(--gray-dark);
-  color: var(--light);
+  background-color: var(--lightgray);
   padding: 0.6rem 0;
 }
 .top a i {
-  color: var(--light);
   font-size: 0.9rem;
 }
 .top .account-options {
@@ -275,28 +332,37 @@ header nav li.nav-item:hover {
 }
 
 .hero {
-  background-image: url("https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg");
+  background-image: url("./assets/images/dog-playing.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 6rem 0;
 }
 .hero .content-wrapper {
+  padding: 7rem 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
-.hero .content-wrapper h5,
-.hero .content-wrapper h2,
+.hero .content-wrapper h6,
+.hero .content-wrapper h1,
 .hero .content-wrapper a {
   color: var(--white);
-  text-shadow: 4px 4px 18px rgba(0, 0, 0, 0.48);
+}
+
+.bottom-hero p {
+  margin-bottom: 0;
+}
+.bottom-hero img {
+  max-height: 120px;
 }
 
 @media screen and (min-width: 992px) {
   .hero .content-wrapper {
-    width: 80%;
+    width: 60%;
+  }
+  .hero .content-wrapper a.btn {
+    width: fit-content;
   }
 }
 :root {
@@ -311,6 +377,7 @@ header nav li.nav-item:hover {
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
+  --darkwhite: #f8f9fa;
   --gray: #767575;
   --gray-dark: #434242;
   --primary: #222d87;
@@ -335,6 +402,7 @@ header nav li.nav-item:hover {
   --sidebar-width: 280px;
   --content-max-width: 1120px;
   --border-radius: 4px;
+  --main-transition: all ease-in-out .25s;
 }
 
 .blog-nav a {
@@ -748,6 +816,7 @@ div.comment:first-of-type {
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
+  --darkwhite: #f8f9fa;
   --gray: #767575;
   --gray-dark: #434242;
   --primary: #222d87;
@@ -772,6 +841,7 @@ div.comment:first-of-type {
   --sidebar-width: 280px;
   --content-max-width: 1120px;
   --border-radius: 4px;
+  --main-transition: all ease-in-out .25s;
 }
 
 .footer {

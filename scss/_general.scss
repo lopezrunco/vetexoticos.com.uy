@@ -12,53 +12,22 @@ html {
 }
 
 body {
-    color: var(--secondary);
+    color: var(--gray);
     overflow-x: hidden;
     font-family: var(--font-family);
 }
 
-// Bootstrap override
-a {
-    color: var(--gray) !important;
-    
-    &:hover {
-        color: var(--gray-dark) !important;
-        text-decoration: none !important;
-    }
+// Bootstrap overrides
+.bg-dark {
+    background: var(--gray-dark) !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--gray-dark);
-    font-weight: bold
+.bg-primary {
+    background: var(--primary) !important;
 }
 
-.btn {
-    font-weight: bold;
-    padding: .375rem 1rem;
-    height: 2.75rem;
-    transition: all 0.4s ease-in-out;
-
-    &:focus,
-    &.focus {
-        box-shadow: none !important
-    }
-}
-
-.btn-primary {
-    color: var(--white);
-}
-
-.theme-bg-light {
-    background: var(--light) !important;
-}
-
-.theme-bg-dark {
-    background: var(--dark) !important
+.text-light {
+    color: var(--darkwhite) !important;
 }
 
 .main-wrapper {
@@ -67,6 +36,14 @@ h6 {
     .container {
         max-width: var(--content-max-width);
     }
+}
+
+.gray-overlay {
+    background-color: #00000063;
+}
+
+.paws-overlay {
+    background-image: url('./assets/images/paw-pattern.png');
 }
 
 .page-title {
@@ -141,21 +118,7 @@ h6 {
         }
 
         &:last-child:after {
-            display: none
+            display: none;
         }
     }
-}
-
-.slider {
-    width: 100%;
-    overflow: hidden;
-}
-
-.slide {
-    display: none;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
 }

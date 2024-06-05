@@ -2,8 +2,9 @@ form {
     input {
         border: 1px solid var(--light);
         border-radius: var(--border-radius);
+        background-color: var(--darkwhite);
         outline: none;
-        color: var(--gray-dark);
+        color: var(--gray);
         padding: .3rem 1rem;
     }
 }

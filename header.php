@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary py-lg-0">
+        <nav class="navbar navbar-expand-lg bg-light py-lg-0">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
                     <img class="main-logo" src="https://vetexoticos.uy/wp-content/uploads/2024/06/logo.png" alt="Logo Vetexoticos">
@@ -70,7 +70,7 @@
 
     <div class="main-wrapper">
         <?php if (!is_front_page()) : ?>
-            <header class="page-title theme-bg-light text-center gradient py-3">
+            <header class="page-title text-center gradient py-3">
                 <h1 class="heading">
                     <?php
                     the_title();
