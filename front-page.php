@@ -79,7 +79,7 @@ get_header();
 				<div class="product-wrapper">
 					<a href="<?php echo esc_url($product->get_permalink()); ?>">
 						<?php echo $product->get_image(); ?>
-						<h6><?php echo $product->get_name(); ?></h6>
+						<h5><?php echo $product->get_name(); ?></h5>
 						<span class="price"><?php echo $product->get_price_html(); ?></span>
 					</a>
 				</div>
