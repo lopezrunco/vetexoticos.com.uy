@@ -113,7 +113,8 @@ section {
     padding: 7rem 0;
   }
 }
-span {
+span,
+small {
   display: inline-block;
 }
 
@@ -806,46 +807,39 @@ div.comment:first-of-type {
   background-color: var(--darkwhite);
 }
 
-.latest-news-container {
-  display: grid;
-  gap: 2rem;
-}
-.latest-news-container .new-wrapper {
+.news-grid .new-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 }
-.latest-news-container .new-wrapper .post-thumbnail {
+.news-grid .new-wrapper .post-thumbnail {
   object-fit: cover;
-  width: 100%;
-}
-.latest-news-container .new-wrapper .post-thumbnail img {
   width: 100%;
   border-radius: var(--border-radius);
-  object-fit: cover;
+  overflow: hidden;
 }
-.latest-news-container .new-wrapper .post-thumbnail span {
-  text-transform: uppercase;
-  color: var(--primary);
+.news-grid .new-wrapper .post-thumbnail img {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  transition: var(--main-transition);
+}
+.news-grid .new-wrapper .post-thumbnail img:hover {
+  transform: scale(1.025);
+}
+.news-grid .new-wrapper .post-thumbnail .read-more {
+  width: fit-content;
 }
 
-@media screen and (min-width: 992px) {
-  .latest-news-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .latest-news-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
 .call-to-action {
   background-image: url("./assets/images/bg-dog.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 0;
 }
 .call-to-action .content-wrapper {

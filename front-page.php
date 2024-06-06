@@ -276,7 +276,8 @@ get_header();
 								alt="Foto de cliente">
 						</div>
 						<p class="testimonial">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, nisi sed sollicitudin interdum, nisl est bibendum massa, at cursus magna urna ut odio. 
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque, nisi sed
+							sollicitudin interdum, nisl est bibendum massa, at cursus magna urna ut odio.
 						</p>
 						<span class="client-name">Dino Capelli</span>
 					</div>
@@ -288,7 +289,8 @@ get_header();
 								alt="Foto de cliente">
 						</div>
 						<p class="testimonial">
-							Vivamus dictum, sit amet orci tortor at placerat bibendum, erat lacus laoreet nulla, id egestas metus purus sit amet orci. Donec fringilla hendrerit convallis.
+							Vivamus dictum, sit amet orci tortor at placerat bibendum, erat lacus laoreet nulla, id
+							egestas metus purus sit amet orci. Donec fringilla hendrerit convallis.
 						</p>
 						<span class="client-name">Mario Perazza</span>
 					</div>
@@ -300,7 +302,8 @@ get_header();
 								alt="Foto de cliente">
 						</div>
 						<p class="testimonial">
-							Auctor est habitasse amet nunc, interdum vel mattis sodales cras. Vivamus dictum, tortor at placerat bibendum, erat lacus laoreet nulla, id egestas metus purus sit amet orci.
+							Auctor est habitasse amet nunc, interdum vel mattis sodales cras. Vivamus dictum, tortor at
+							placerat bibendum, erat lacus laoreet nulla, id egestas metus purus sit amet orci.
 						</p>
 						<span class="client-name">Carlos Fontana</span>
 					</div>
@@ -359,36 +362,50 @@ get_header();
 	</article>
 </section>
 
-<article class="content px-3 py-5 p-md-5">
-	<div class="container">
+<section class="news-grid">
+	<article class="container">
 		<?php
 		// Query latest blog posts
 		$latest_posts = new WP_Query(
 			array(
-				'posts_per_page' => 5,
+				'posts_per_page' => 3,
 				'post_type' => 'post',
 				'orderby' => 'date',
 				'order' => 'DESC',
 			)
 		);
 		if ($latest_posts->have_posts()) {
-			echo '<h3 class="text-center mb-5">Novedades recientes</h3>';
-			echo '<div class="latest-news-container">';
+			echo '
+				<div class="section-title">
+					<h2>Novedades recientes</h2>
+					<p>
+						Explora las últimas novedades y tendencias en el fascinante mundo de las mascotas.
+						Mantente al día con los últimos productos, eventos y descubrimientos que harán que la vida junto a tu mascota sea aún más especial.
+					</p>
+				</div>
+			';
+			echo '<div class="row">';
 			while ($latest_posts->have_posts()) {
 				$latest_posts->the_post();
 				?>
-				<div class="new-wrapper">
-					<?php if (has_post_thumbnail()) { ?>
-						<div class="post-thumbnail">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+				<div class="col-lg-4 mb-5">
+					<div class="new-wrapper">
+						<?php if (has_post_thumbnail()) { ?>
+							<div class="post-thumbnail">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+							</div>
+						<?php } ?>
+						<div class="post-content">
+							<small class="post-date mb-3">
+								<i class="fa-solid fa-calendar-days me-2"></i>
+								<?php echo get_the_date('j \d\e F \d\e Y'); ?>
+							</small>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<div class="post-excerpt">
+								<?php echo wp_trim_words(get_the_excerpt(), 30, '...'); ?>
+							</div>
+							<a href="<?php the_permalink(); ?>" class="btn btn-primary read-more">Continuar leyendo <i class="fa-solid fa-chevron-right"></i></a>
 						</div>
-					<?php } ?>
-					<div class="post-content">
-						<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-						<div class="post-excerpt">
-							<?php the_excerpt(); ?>
-						</div>
-						<a href="<?php the_permalink(); ?>" class="read-more">Leer más</a>
 					</div>
 				</div>
 				<?php
@@ -397,11 +414,11 @@ get_header();
 			// Restore global post data
 			wp_reset_postdata();
 		} else {
-			echo '<p>No blog posts found</p>';
+			echo '<p>No se encontraron novedades.</p>';
 		}
 		?>
-	</div>
-</article>
+	</article>
+</section>
 
 <?php
 get_footer();
