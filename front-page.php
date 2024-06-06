@@ -62,6 +62,7 @@ get_header();
 			'order' => 'DESC',
 		));
 		if ($latest_products) {
+			$shop_page_url = get_permalink(wc_get_page_id('shop'));
 			echo '
 			<div class="section-title-more">
 				<div>
@@ -69,7 +70,7 @@ get_header();
 					<h2>Últimos productos</h2>
 				</div>
 				<div>
-					<button class="btn btn-primary">Ver más productos <i class="fa-solid fa-chevron-right"></i></button>
+					<a class="btn btn-primary" href="' . esc_url($shop_page_url) . '">Ver más productos <i class="fa-solid fa-chevron-right"></i></a>
 				</div>
 			</div>
 		';
