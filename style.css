@@ -891,6 +891,40 @@ div.comment:first-of-type {
   max-width: 300px;
 }
 
+section.testimonials {
+  padding: 0;
+  text-align: center;
+}
+section.testimonials h2,
+section.testimonials p {
+  color: var(--white);
+}
+section.testimonials span {
+  color: var(--secondary);
+}
+section.testimonials .container {
+  padding: 6rem 0;
+}
+section.testimonials .container .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+section.testimonials .container .content-wrapper .image-wrapper {
+  overflow: hidden;
+  border-radius: 50%;
+}
+section.testimonials .container .content-wrapper .image-wrapper img {
+  max-width: 100px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+section.testimonials .container .content-wrapper .image-wrapper img:hover, section.testimonials .container .content-wrapper .image-wrapper img:active {
+  transform: scale(1.025);
+}
+
 .bottom {
   border-top: 1px solid var(--light);
 }
