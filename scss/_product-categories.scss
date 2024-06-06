@@ -1,49 +1,55 @@
-.product-categories-container {
-    display: grid;
-    gap: 1rem;
-
-    .product-category-item-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
+.product-categories {
+    .product-categories-container {
+        display: grid;
         gap: 1rem;
 
-        .image-wrapper {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
+        .product-category-item-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            gap: 1rem;
 
-            img {
+            .image-wrapper {
                 width: 150px;
                 height: 150px;
                 border-radius: 50%;
-                object-fit: cover;
-                transition: var(--main-transition);
+                overflow: hidden;
 
-                &:hover,
-                &:active {
-                    transform: scale(1.1);
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    transition: var(--main-transition);
+
+                    &:hover,
+                    &:active {
+                        transform: scale(1.1);
+                    }
                 }
             }
-        }
 
-        span {
-            text-transform: uppercase;
-            color: var(--primary);
+            span {
+                text-transform: uppercase;
+                color: var(--primary);
+            }
         }
     }
 }
 
 @media screen and (min-width: 992px) {
-    .product-categories-container {
-        grid-template-columns: repeat(3, 1fr);
+    .product-categories {
+        .product-categories-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .product-categories-container {
-        grid-template-columns: repeat(5, 1fr);
+    .product-categories {
+        .product-categories-container {
+            grid-template-columns: repeat(5, 1fr);
+        }
     }
 }

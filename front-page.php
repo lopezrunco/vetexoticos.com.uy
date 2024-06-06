@@ -114,7 +114,7 @@ get_header();
 	</article>
 </section>
 
-<section class="bg-light">
+<section class="product-categories bg-light">
 	<article class="container">
 		<?php
 		$product_categories = get_terms(
