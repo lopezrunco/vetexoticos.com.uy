@@ -28,11 +28,12 @@ get_header();
 		<div class="container">
 			<div class="content-wrapper">
 				<h6 class="subtitle">Encuentra los mejores suplementos</h6>
-				<h1 class=title"">Sabemos que los animales son parte de tu familia, por eso, te ayudamos a cuidarlos.</h1>
+				<h1 class=title"">Sabemos que los animales son parte de tu familia, por eso, te ayudamos a cuidarlos.
+				</h1>
 				<?php
 				$shop_page_url = get_permalink(wc_get_page_id('shop'));
 				echo '<a class="btn btn-light" href="' . esc_url($shop_page_url) . '">Ir a la tienda <i class="fa-solid fa-paw"></i></a>'
-				?>
+					?>
 			</div>
 		</div>
 	</div>
@@ -43,7 +44,8 @@ get_header();
 		<div class="container ">
 			<div class="row justify-content-evenly align-items-center">
 				<div class="col-lg-3 offset-1">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/pet-food.png" alt="Comida para mascota">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/pet-food.png"
+						alt="Comida para mascota">
 				</div>
 				<div class="col-lg-8">
 					<p>Consigue importantes descuentos en compras al por mayor de comida para mascotas!</p>
@@ -56,11 +58,13 @@ get_header();
 <section class="latest-products">
 	<article class="container">
 		<?php
-		$latest_products = wc_get_products(array(
-			'limit' => 6,
-			'orderby' => 'date',
-			'order' => 'DESC',
-		));
+		$latest_products = wc_get_products(
+			array(
+				'limit' => 6,
+				'orderby' => 'date',
+				'order' => 'DESC',
+			)
+		);
 		if ($latest_products) {
 			$shop_page_url = get_permalink(wc_get_page_id('shop'));
 			echo '
@@ -76,7 +80,7 @@ get_header();
 		';
 			echo '<div class="latest-products-container">';
 			foreach ($latest_products as $product) {
-		?>
+				?>
 				<div class="product-wrapper">
 					<a href="<?php echo esc_url($product->get_permalink()); ?>">
 						<?php echo $product->get_image(); ?>
@@ -84,7 +88,7 @@ get_header();
 						<span class="price"><?php echo $product->get_price_html(); ?></span>
 					</a>
 				</div>
-		<?php
+				<?php
 			}
 			echo '</div>';
 		} else {
@@ -94,15 +98,33 @@ get_header();
 	</article>
 </section>
 
+<section class="call-to-action">
+	<article class="gray-overlay">
+		<article class="container">
+			<div class="content-wrapper">
+				<h6>Encontrá los mejores suplementos</h6>
+				<h1>Nuevos arrivos todas las semanas</h1>
+				<?php
+				$about_page = get_page_by_path('nosotros');
+				$about_page_url = get_permalink($about_page->ID);
+				echo '<a class="btn btn-light" href="' . esc_url($about_page_url) . '">Saber más sobre nosotros <i class="fa-solid fa-bone"></i></a>';
+				?>
+			</div>
+		</article>
+	</article>
+</section>
+
 <section class="bg-light">
 	<article class="container">
 		<?php
-		$product_categories = get_terms(array(
-			'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
-			'orderby' => 'name',
-			'order' => 'ASC',
-			'hide_empty' => true, // Hide empty categories
-		));
+		$product_categories = get_terms(
+			array(
+				'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
+				'orderby' => 'name',
+				'order' => 'ASC',
+				'hide_empty' => true, // Hide empty categories
+			)
+		);
 		echo '
 			<div class="section-title">
 				<h2>Categorías de producto</h2>
@@ -142,18 +164,20 @@ get_header();
 	<div class="container">
 		<?php
 		// Query latest blog posts
-		$latest_posts = new WP_Query(array(
-			'posts_per_page' => 5,
-			'post_type' => 'post',
-			'orderby' => 'date',
-			'order' => 'DESC',
-		));
+		$latest_posts = new WP_Query(
+			array(
+				'posts_per_page' => 5,
+				'post_type' => 'post',
+				'orderby' => 'date',
+				'order' => 'DESC',
+			)
+		);
 		if ($latest_posts->have_posts()) {
 			echo '<h3 class="text-center mb-5">Novedades recientes</h3>';
 			echo '<div class="latest-news-container">';
 			while ($latest_posts->have_posts()) {
 				$latest_posts->the_post();
-		?>
+				?>
 				<div class="new-wrapper">
 					<?php if (has_post_thumbnail()) { ?>
 						<div class="post-thumbnail">
@@ -168,7 +192,7 @@ get_header();
 						<a href="<?php the_permalink(); ?>" class="read-more">Leer más</a>
 					</div>
 				</div>
-		<?php
+				<?php
 			}
 			echo '</div>';
 			// Restore global post data
