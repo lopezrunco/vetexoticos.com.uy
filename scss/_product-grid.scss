@@ -1,7 +1,4 @@
-.latest-products-container {
-    display: grid;
-    gap: 2rem;
-
+.product-grid {
     .product-wrapper {
         display: flex;
         flex-direction: column;
@@ -34,17 +31,5 @@
                 }
             }
         }
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .latest-products-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .latest-products-container {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 }
