@@ -919,6 +919,22 @@ section.testimonials .container .content-wrapper .image-wrapper img:hover, secti
   transform: scale(1.025);
 }
 
+.featured-services {
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+.featured-services .container {
+  padding: 6rem 0;
+}
+.featured-services .container i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.featured-services .container p {
+  color: var(--lightgray);
+}
+
 .bottom {
   border-top: 1px solid var(--light);
 }

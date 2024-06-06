@@ -1,0 +1,18 @@
+.featured-services {
+    padding: 0;
+    color: #fff;
+    text-align: center;
+
+    .container {
+        padding: 6rem 0;
+
+        i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--lightgray);
+        }
+    }
+}
