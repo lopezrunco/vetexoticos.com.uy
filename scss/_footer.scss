@@ -1,9 +1,8 @@
-@import './Variables.scss';
-
 .footer {
+    background-color: var(--primary);
     color: var(--lightgray);
 
-    a {
-        color: var(--lightgray);
+    a.developer {
+        color: var(--secondary) !important;
     }
 }
