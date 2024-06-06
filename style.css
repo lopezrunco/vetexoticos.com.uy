@@ -113,6 +113,10 @@ section {
     padding: 7rem 0;
   }
 }
+span {
+  display: inline-block;
+}
+
 .bg-dark {
   background: var(--gray-dark) !important;
 }
@@ -220,7 +224,6 @@ section {
   font-size: var(--font-small);
 }
 .meta span {
-  display: inline-block;
   margin-right: 0.25em;
 }
 .meta span a {
@@ -797,7 +800,6 @@ div.comment:first-of-type {
 }
 .latest-products-container .product-wrapper a span.price {
   padding: 0.5rem 1rem;
-  display: inline-block;
   border-radius: var(--border-radius);
   text-transform: uppercase;
   color: var(--primary);
@@ -872,6 +874,35 @@ div.comment:first-of-type {
 .call-to-action .content-wrapper h6,
 .call-to-action .content-wrapper h1 {
   color: var(--white);
+}
+
+.food-brands {
+  padding-top: 0;
+}
+.food-brands .wrapper {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.food-brands .wrapper .paws-overlay {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.food-brands .wrapper .paws-overlay:hover {
+  transform: scale(1.025);
+}
+.food-brands .wrapper .paws-overlay h2 {
+  color: var(--white);
+}
+.food-brands .wrapper .paws-overlay span {
+  color: var(--secondary);
+}
+.food-brands .wrapper .paws-overlay img {
+  max-width: 300px;
 }
 
 .bottom {

@@ -27,6 +27,10 @@ section {
     }
 }
 
+span {
+    display: inline-block;
+}
+
 // Bootstrap overrides
 .bg-dark {
     background: var(--gray-dark) !important;
@@ -148,7 +152,6 @@ section {
     font-size: var(--font-small);
 
     span {
-        display: inline-block;
         margin-right: .25em;
 
         a {
