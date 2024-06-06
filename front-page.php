@@ -53,6 +53,46 @@ get_header();
 	</div>
 </div>
 
+<section class="latest-products">
+	<article class="container">
+		<?php
+		$latest_products = wc_get_products(array(
+			'limit' => 6,
+			'orderby' => 'date',
+			'order' => 'DESC',
+		));
+		if ($latest_products) {
+			echo '
+			<div class="section-title-more">
+				<div>
+					<span class="top-title">Cosas que ellos amarán</span>
+					<h2>Últimos productos</h2>
+				</div>
+				<div>
+					<button class="btn btn-primary">Ver más productos <i class="fa-solid fa-chevron-right"></i></button>
+				</div>
+			</div>
+		';
+			echo '<div class="latest-products-container">';
+			foreach ($latest_products as $product) {
+		?>
+				<div class="product-wrapper">
+					<a href="<?php echo esc_url($product->get_permalink()); ?>">
+						<?php echo $product->get_image(); ?>
+						<h6><?php echo $product->get_name(); ?></h6>
+						<span class="price"><?php echo $product->get_price_html(); ?></span>
+					</a>
+				</div>
+		<?php
+			}
+			echo '</div>';
+		} else {
+			echo '<p>No se encontraron productos.</p>';
+		}
+		?>
+	</article>
+</section>
+
 <section class="bg-light">
 	<article class="container">
 		<?php
@@ -96,36 +136,6 @@ get_header();
 		?>
 	</article>
 </section>
-
-<article class="content px-3 py-5 p-md-5">
-	<div class="container">
-		<?php
-		$latest_products = wc_get_products(array(
-			'limit' => 6,
-			'orderby' => 'date',
-			'order' => 'DESC',
-		));
-		if ($latest_products) {
-			echo '<h3 class="text-center mb-5">Últimos productos</h3>';
-			echo '<div class="latest-products-container">';
-			foreach ($latest_products as $product) {
-		?>
-				<div class="product-wrapper">
-					<a href="<?php echo esc_url($product->get_permalink()); ?>">
-						<?php echo $product->get_image(); ?>
-						<h6><?php echo $product->get_name(); ?></h6>
-						<span class="price"><?php echo $product->get_price_html(); ?></span>
-					</a>
-				</div>
-		<?php
-			}
-			echo '</div>';
-		} else {
-			echo '<p>No se encontraron productos.</p>';
-		}
-		?>
-	</div>
-</article>
 
 <article class="content px-3 py-5 p-md-5">
 	<div class="container">

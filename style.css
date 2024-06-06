@@ -154,6 +154,24 @@ section {
     width: 80%;
   }
 }
+.section-title-more {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.section-title-more span.top-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+  .section-title-more {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .page-title {
   position: sticky;
   top: 0;
