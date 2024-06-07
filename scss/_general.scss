@@ -120,9 +120,14 @@ small {
     padding: .2rem 0 !important;
 }
 
-.gradient {
-    background: rgb(43, 43, 43);
-    background: linear-gradient(151deg, var(--orange) 0%, var(--pink) 35%, var(--primary) 100%) !important;
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    font-size: 1.5rem;
 }
 
 .border-radius {
