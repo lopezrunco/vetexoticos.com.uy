@@ -45,4 +45,20 @@ get_header(); ?>
     </article>
 </section>
 
+<section class="call-to-action">
+	<article class="gray-overlay">
+		<article class="container">
+			<div class="content-wrapper">
+				<h6>Ofrecemos una amplia gama de productospara perros, gatos, aves, peces y más.</h6>
+				<h1>Descubre todo lo que necesitas para cuidar y consentir a tu mascota.</h1>
+				<?php
+				$shop_page = get_page_by_path('shop');
+				$shop_page_url = get_permalink($shop_page->ID);
+				echo '<a class="btn btn-light" href="' . esc_url($shop_page_url) . '">Ir a la tienda <i class="fa-solid fa-store"></i></a>';
+				?>
+			</div>
+		</article>
+	</article>
+</section>
+
 <?php get_footer(); ?>
