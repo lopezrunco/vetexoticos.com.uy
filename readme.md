@@ -61,6 +61,13 @@ In the Wordpress administrator go to Appearence => Menus and in "Navigation Labe
 ### Add Blog page:
 In the Wordpress administrator create a new page called "Blog". Then go to Settings => Reading and in "Your homepage displays" go to "Posts page" and select the Blog page.
 
+### Add About page:
+In the Wordpress administrator create a new page  and enter a title for it (e.g., "About Us"). 
+
+In the "Page Attributes" section on the right side, select the "About" template from the "Template" dropdown.
+
+Leave the content area blank or add a brief description for reference and publish the page.
+
 ### Run SASS command:
 ```sh
     sass --watch scss/style.scss style.css

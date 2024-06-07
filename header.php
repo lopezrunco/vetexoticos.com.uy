@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes(); ?>>
 
 <head>
     <!-- Meta -->
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vetexoticos Wordpress theme">
@@ -70,11 +70,13 @@
 
     <div class="main-wrapper">
         <?php if (!is_front_page()) : ?>
-            <header class="page-title text-center gradient py-3">
-                <h1 class="heading">
+            <header class="page-title bg-primary">
+                <div class="paws-overlay">
+                <h2 class="heading">
                     <?php
                     the_title();
                     ?>
-                </h1>
+                </h2>
+                </div>
             </header>
         <?php endif; ?>
