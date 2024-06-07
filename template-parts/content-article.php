@@ -1,36 +1,45 @@
-<div class="container">
-    <header class="content-header">
-        <div class="meta mb-3">
-            <span class="date">
+<section>
+    <article class="container">
+        <?php if (has_post_thumbnail()) : ?>
+            <div class="full-width-img mb-4">
                 <?php
-                the_date();
+                $thumbnail_id = get_post_thumbnail_id();
+                $img_url = wp_get_attachment_image_url($thumbnail_id, 'large');
                 ?>
-            </span>
-
-            <?php
-            the_tags(
-                '<span class="tag"><i class="fa fa-tag"></i> ',
-                '</span><span class="tag"><i class="fa fa-tag"></i>',
-                '</span>'
-            );
-            ?>
-
-            <span class="comment">
-                <a href="#comments"><i class='fa fa-comment'></i>
+                <img class="w-100 border-radius" src="<?php echo esc_url(($img_url)) ?>" alt="<?php the_title_attribute(); ?>">
+            </div>
+        <?php endif; ?>
+        <header class="content-header mb-3">
+            <div class="meta">
+                <span class="date">
+                    <i class="fa-solid fa-calendar-days me-2"></i>
+                    <?php echo get_the_date('j \d\e F \d\e Y'); ?>
+                </span>
+                <span class="author">
+                    <i class="fa-solid fa-user me-2"></i>
+                    <?php the_author(); ?>
+                </span>
+                <div>
                     <?php
-                    comments_number();
+                    the_tags(
+                        '<span class="tag"><i class="fa fa-tag me-2"></i> ',
+                        '</span><span class="tag"><i class="fa fa-tag me-2"></i>',
+                        '</span>'
+                    );
                     ?>
-                </a>
-            </span>
-        </div>
-    </header>
+                </div>
+                <span class="comment">
+                    <a href="#comments"><i class='fa fa-comment me-2'></i>
+                        <?php comments_number(); ?>
+                    </a>
+                </span>
+            </div>
+        </header>
 
-    <?php
-    the_content();
-    ?>
+        <?php
+        the_content();
+        comments_template();
+        ?>
 
-    <?php
-    comments_template();
-    ?>
-
-</div>
+    </article>
+</section>
