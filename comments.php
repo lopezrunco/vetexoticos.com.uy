@@ -2,32 +2,32 @@
     <div class="comments" id="comments">
         <div class="comments-header">
             <h2 class="comment-reply-title">
-
                 <?php
                 if (!have_comments()) {
-                    echo "Leave a comment";
+                    echo "Aún no hay comentarios";
                 } else {
-                    echo get_comments_number() . " Comments";
+                    $comments_number = get_comments_number();
+                    if ($comments_number === 1) {
+                        echo $comments_number . " comentario:";
+                    } else {
+                        echo $comments_number . " comentarios:";
+                    }
                 }
                 ?>
-
             </h2>
         </div>
 
         <div class="comments-inner">
-
             <?php wp_list_comments(
                 array(
                     'avatar_size' => 120,
                     'style' => 'div'
                 )
             ); ?>
-
         </div>
-
     </div>
 
-    <hr class="" aria-hidden="true">
+    <hr aria-hidden="true">
 
     <?php
     if (comments_open()) {

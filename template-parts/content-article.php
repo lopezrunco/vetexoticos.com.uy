@@ -1,14 +1,5 @@
 <section>
     <article class="container">
-        <?php if (has_post_thumbnail()) : ?>
-            <div class="full-width-img mb-4">
-                <?php
-                $thumbnail_id = get_post_thumbnail_id();
-                $img_url = wp_get_attachment_image_url($thumbnail_id, 'large');
-                ?>
-                <img class="w-100 border-radius" src="<?php echo esc_url(($img_url)) ?>" alt="<?php the_title_attribute(); ?>">
-            </div>
-        <?php endif; ?>
         <header class="content-header mb-3">
             <div class="meta">
                 <span class="date">
