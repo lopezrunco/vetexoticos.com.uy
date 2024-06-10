@@ -101,8 +101,8 @@ small {
 
 .page-title {
     position: sticky;
+    z-index: 9;
     top: 0;
-    z-index: 9999;
     transition: all .2s;
     text-align: center;
 

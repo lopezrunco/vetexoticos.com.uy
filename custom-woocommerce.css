@@ -1,14 +1,185 @@
-/* Custom WooCommerce styles */
-h2.woocommerce-loop-product__title {
-    color: #ff6600;
-    font-size: 24px;
-}
+/* Override WooCommerce styles */
 
-.woocommerce div.product .price {
-    color: #008000;
-    font-weight: bold;
-}
+/* Shop page */
 
-.woocommerce {
+.woocommerce.columns-4 {
     padding: 7rem 0;
+}
+
+.woocommerce ul.products li.product a img {
+    border-radius: var(--border-radius);
+    height: 220px;
+    object-fit: cover;
+}
+
+.woocommerce ul.products li.product a {
+    text-align: center;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+    font-weight: 400;
+}
+
+.woocommerce ul.products li.product .price {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    color: var(--primary);
+    background-color: var(--lightgray);
+    width: fit-content;
+    margin: 0 auto;
+    transition: var(--main-transition);
+}
+
+.woocommerce ul.products li.product .button {
+    display: none;
+}
+
+.woocommerce .woocommerce-ordering select {
+    border: 1px solid var(--light);
+    border-radius: var(--border-radius);
+    background-color: var(--darkwhite);
+    outline: none;
+    color: var(--gray);
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+}
+
+.woocommerce span.onsale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--danger);
+    height: 4rem;
+    width: 4rem;
+}
+
+/* Single product page */
+
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper img {
+    border-radius: var(--border-radius);
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+    background: var(--white);
+    transition: var(--main-transition);
+
+    &:hover {
+        background: var(--lightgray);
+    }
+}
+
+.summary.entry-summary p.price .woocommerce-Price-amount.amount {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.variations select {
+    border: 1px solid var(--light);
+    border-radius: var(--border-radius);
+    background-color: var(--darkwhite);
+    outline: none;
+    color: var(--gray);
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+}
+
+.woocommerce .quantity .qty {
+    width: 6rem;
+}
+
+.woocommerce div.product form.cart .button {
+    background-color: var(--primary);
+}
+
+.pswp__zoom-wrap img {
+    border-radius: var(--border-radius);
+}
+
+.pswp__bg {
+    background-color: var(--darktransparent);
+}
+
+.pswp__caption {
+    display: none;
+}
+
+/* Cart page */
+
+.wp-block-woocommerce-cart.alignwide {
+    padding: 7rem 0;
+}
+
+.editor-styles-wrapper table.wc-block-cart-items .wc-block-cart-items__header,
+table.wc-block-cart-items .wc-block-cart-items__header span,
+.is-large.wc-block-cart .wc-block-cart__totals-title {
+    font-size: 1rem !important;
+}
+
+table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image img {
+    border-radius: var(--border-radius);
+}
+
+.editor-styles-wrapper table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity .wc-block-cart-item__remove-link,
+table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity .wc-block-cart-item__remove-link {
+    background: var(--danger) !important;
+    color: var(--white) !important;
+    border-radius: 20px !important;
+    padding: 0.4rem 2rem !important;
+    text-decoration: none !important;
+    transition: var(--main-transition) !important;
+
+    &:hover {
+        background: var(--gray-dark) !important;
+    }
+}
+
+.is-large.wc-block-cart .wc-block-components-sidebar {
+    background-color: var(--lightgray);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
+
+.wc-block-cart__submit {
+    background: var(--success);
+    border-radius: var(--border-radius);
+    transition: var(--main-transition);
+
+    a {
+        color: var(--white) !important;
+
+    }
+
+    &:hover {
+        background: var(--gray-dark);
+    }
+}
+
+/* Checkout page */
+
+.wp-block-woocommerce-checkout {
+    padding: 7rem 0 !important;
+}
+
+.wc-block-components-form input,
+.wc-block-components-form textarea {
+    border-color: var(--light) !important;
+}
+
+.wc-block-checkout__actions_row button,
+.wc-block-components-totals-coupon__content button {
+    outline: none !important;
+    border: none !important;
+    background-color: var(--success) !important;
+    color: var(--white) !important;
+    border-radius: 20px !important;
+    padding: .4rem 2rem !important;
+    transition: var(--main-transition) !important;
+
+    &:hover,
+    &:active {
+        background-color: var(--dark) !important;
+    }
 }
