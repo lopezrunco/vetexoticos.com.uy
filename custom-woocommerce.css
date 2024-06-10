@@ -1,0 +1,14 @@
+/* Custom WooCommerce styles */
+h2.woocommerce-loop-product__title {
+    color: #ff6600;
+    font-size: 24px;
+}
+
+.woocommerce div.product .price {
+    color: #008000;
+    font-weight: bold;
+}
+
+.woocommerce {
+    padding: 7rem 0;
+}

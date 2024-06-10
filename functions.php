@@ -69,3 +69,17 @@ function starterwptheme_widget_areas()
 }
 
 add_action('widgets_init', 'starterwptheme_widget_areas');
+
+// function vetexoticos_woocommerce_support() {
+//     add_theme_support( 'woocommerce' );
+// }
+// add_action( 'after_setup_theme', 'vetexoticos_woocommerce_support' );
+
+function vetexoticos_enqueue_styles() {
+    // Enqueue the theme's main stylesheet
+    wp_enqueue_style( 'vetexoticos-style', get_stylesheet_uri() );
+
+    // Enqueue the custom WooCommerce stylesheet
+    wp_enqueue_style( 'custom-woocommerce', get_template_directory_uri() . '/custom-woocommerce.css', array('vetexoticos-style') );
+}
+add_action( 'wp_enqueue_scripts', 'vetexoticos_enqueue_styles' );
