@@ -1,3 +1,5 @@
+// Blog comments
+
 .comments-wrapper {
     margin: 5rem 0 0;
 
@@ -93,6 +95,50 @@
                 &:hover {
                     background-color: #005689;
                 }
+            }
+        }
+    }
+}
+
+.comment-respond {
+    border: 1px solid var(--light);
+    border-radius: var(--border-radius);
+    background-color: var(--darkwhite);
+    color: var(--gray);
+    padding: 2rem;
+
+    .logged-in-as {
+        margin-bottom: 1rem;
+
+        a {
+            margin-left: 1rem;
+            font-weight: 700;
+        }
+    }
+
+    .required-field-message {
+        display: block;
+        font-size: .8rem;
+        margin-top: 1rem;
+    }
+
+    .comment-form-comment {
+        label {
+            display: block;
+        }
+
+        textarea {
+            width: 100%;
+        }
+    }
+
+    .form-submit {
+        input.submit {
+            transition: var(--main-transition);
+
+            &:hover,
+            &:active {
+                background-color: var(--light);
             }
         }
     }

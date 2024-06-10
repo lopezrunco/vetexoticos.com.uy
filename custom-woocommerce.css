@@ -206,3 +206,9 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantit
 .woocommerce-customer-details {
     padding: 2rem 0;
 }
+
+/* Related products section */
+
+section.related.products {
+    padding-bottom: 0;
+}
