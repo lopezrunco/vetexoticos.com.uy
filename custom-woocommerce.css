@@ -183,3 +183,26 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantit
         background-color: var(--dark) !important;
     }
 }
+
+/* After checkout */
+
+.woocommerce-order {
+    padding: 7rem 0;
+}
+
+.woocommerce-order .woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--light);
+}
+
+.woocommerce-order-details {
+    margin-bottom: 0 !important;
+    padding: 2rem 0 !important;
+}
+
+.woocommerce-customer-details {
+    padding: 2rem 0;
+}
