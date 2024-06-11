@@ -22,7 +22,7 @@ get_header();
                     <a href="https://www.instagram.com/vetexoticos.uy/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col-lg-7 offset-1 mb-5 mb-lg-0">
+            <div class="col-lg-7 offset-lg-1 mb-5 mb-lg-0">
                 <?php echo do_shortcode('[contact-form-7 id="39d3242" title="Contact form 1"]'); ?>
             </div>
         </div>
