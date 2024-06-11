@@ -1,5 +1,3 @@
-// Blog comments
-
 .comments-wrapper {
     margin: 5rem 0 0;
 
@@ -16,7 +14,8 @@
         margin-bottom: 20px;
     }
 
-    .comment {
+    .comment,
+    .review {
         background-color: var(--lightgray);
         padding: 2rem;
         margin-bottom: 1rem;
