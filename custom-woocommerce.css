@@ -222,3 +222,69 @@ section.related.products {
 .wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
     color: #fff !important;
 }
+
+/* My account page */
+
+nav.woocommerce-MyAccount-navigation {
+    padding: 4rem 0;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+
+        li {
+            padding: 0.3rem 1rem;
+            margin: .5rem 0;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: '\f054';
+                font-family: 'Font Awesome 6 Free';
+                font-weight: 700;
+                margin-right: .8rem;
+                font-size: .8rem;
+            }
+
+        }
+    }
+}
+
+.woocommerce-MyAccount-content {
+    padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    nav.woocommerce-MyAccount-navigation {
+        ul {
+            flex-direction: row;
+        }
+    }
+}
+
+/* My directions page */
+
+.woocommerce-MyAccount-content {
+    .u-columns.woocommerce-Addresses.col2-set.addresses {
+        .u-column1.col-1.woocommerce-Address,
+        .u-column2.col-2.woocommerce-Address {
+            float: none !important;
+        }
+    }
+}
+
+
+.woocommerce-Address-title.title {
+    a {
+        display: block;
+        font-weight: 700;
+    }
+}
+
+.woocommerce-Address-title h3,
+.woocommerce-Address address {
+    white-space: nowrap !important;
+}
