@@ -212,3 +212,13 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantit
 section.related.products {
     padding-bottom: 0;
 }
+
+/* New in store section (Cart empty) */
+
+.wc-block-grid__products .wc-block-grid__product-image img {
+    border-radius: var(--border-radius) !important;
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
+    color: #fff !important;
+}

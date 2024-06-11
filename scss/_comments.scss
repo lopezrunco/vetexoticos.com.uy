@@ -132,6 +132,16 @@
         }
     }
 
+    input {
+        display: block;
+    }
+
+    .comment-form-cookies-consent {
+        input {
+            display: inline-block;
+        }
+    }
+
     .form-submit {
         input.submit {
             transition: var(--main-transition);
