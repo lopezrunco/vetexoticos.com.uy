@@ -1,5 +1,26 @@
 # Vetexoticos pet shop Wordpress theme
 
+## Overview:
+
+Vetexoticos Pet Shop Wordpress Theme is a versatile and customizable theme designed specifically for pet shops, groomers, and pet care service providers. With a sleek design and user-friendly interface, it offers a seamless experience for both website administrators and visitors.
+
+![Screenshot](screenshot.png)
+
+## Technologies Used:
+
+![image](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+
+![image](https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+
+![image](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
+
+![image](https://img.shields.io/badge/WooCommerce-96588A?style=for-the-badge&logo=woocommerce&logoColor=white)
+
+![image](https://img.shields.io/badge/XAMPP-F37623?style=for-the-badge&logo=xampp&logoColor=white)
+
+![image](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+
 ## Instructions:
 
 ### 1. Download XAMPP
@@ -72,3 +93,37 @@ Leave the content area blank or add a brief description for reference and publis
 ```sh
     sass --watch scss/style.scss style.css
 ```
+
+## Roadmap:
+
+### Template Development
+- [X] Design Standard Pages Layout
+- [X] Customize Woocomerce styles
+- [X] Style Search Results Page
+- [X] Develop Custom Header and Footer
+
+### WooCommerce Integration
+- [X] Integrate WooCommerce Functions
+- [X] Configure Product Variation Display
+- [ ] Implement Product Filtering Options
+- [ ] Implement Wishlist and Compare Features
+
+### Design & Styling
+- [X] Implement Responsive Design for Mobile Devices
+- [X] Ensure Cross-Browser Compatibility
+- [ ] Optimize Loading Speeds for Improved Performance
+- [ ] Implement Accessibility Features
+
+### Quality Assurance & Deployment
+- [ ] Review and Optimize Codebase
+- [ ] Conduct User Testing
+- [ ] Ensure Compatibility with Latest WooCommerce Versions
+- [ ] Address Feedback and Bug Fixes
+
+## Future Enhancements:
+- [ ] Integration with MercadoPago
+- [ ] Implement Custom Widgets for Product Recommendations
+- [ ] Develop Advanced Filtering and Sorting Options
+- [ ] Incorporate Social Media Sharing Features
+- [ ] Enhance User Account Dashboard Features
+- [ ] Implement Advanced Analytics for Sales Tracking
