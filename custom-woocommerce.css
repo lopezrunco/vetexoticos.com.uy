@@ -56,6 +56,193 @@
     width: 4rem;
 }
 
+.woocommerce-breadcrumb,
+.woocommerce-products-header {
+    display: none;
+}
+
+ul.products.columns-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    margin: 2rem 0;
+    border-top: 1px solid var(--lightgray);
+    padding-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    ul.products.columns-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    ul.products.columns-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+ul.products.columns-4 li.product a img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    border: 1px solid #f3f3f3;
+}
+
+ul.products.columns-4 li.product a h2.woocommerce-loop-product__title {
+    font-size: 1.2rem;
+    color: var(--gray-dark);
+    font-weight: 400;
+}
+
+ul.products.columns-4 li.product a span.price {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    color: var(--primary);
+    background-color: var(--lightgray);
+    transition: var(--main-transition);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+ul.products.columns-4 li.product .button {
+    display: none !important;
+}
+
+ul.products.columns-4 li.product .button:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--white);
+}
+
+ul.products.columns-4 li.product .onsale {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--danger);
+    color: var(--white);
+    padding: .3rem .7rem;
+    border-radius: 5px;
+    margin: .3rem;
+}
+
+p.woocommerce-result-count,
+form.woocommerce-ordering {
+    text-align: center;
+}
+
+form.woocommerce-ordering {
+    margin-bottom: 1rem;
+}
+
+form.woocommerce-ordering select.orderby {
+    border: 1px solid var(--light);
+    border-radius: var(--border-radius);
+    background-color: var(--darkwhite);
+    outline: none;
+    color: var(--gray);
+    padding: .3rem 1rem;
+}
+
+@media screen and (min-width: 992px) {
+
+    p.woocommerce-result-count,
+    form.woocommerce-ordering {
+        text-align: left;
+    }
+
+    p.woocommerce-result-count {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    form.woocommerce-ordering {
+        display: inline-block;
+    }
+}
+
+/* Pagination */
+.woocommerce-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.woocommerce-pagination .page-numbers {
+    list-style: none;
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+    color: var(--dark);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    border-radius: var(--border-radius);
+    transition: var(--main-transition);
+}
+
+.woocommerce-pagination a.page-numbers {
+    border: 1px solid #ccc;
+}
+
+.woocommerce-pagination .page-numbers li a:hover {
+    background-color: var(--lightgray);
+}
+
+.woocommerce-pagination .page-numbers .current {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+/* Widget Sidebar */
+
+#sidebar .wp-block-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#sidebar ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#sidebar > ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#sidebar ul > div ul li {
+    margin: 1rem;
+    transition: var(--main-transition);
+}
+
+#sidebar ul > div ul li:hover {
+    margin-left: 1.2rem;
+}
+
+#sidebar ul > div .wc-block-components-filter-reset-button {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    color: var(--primary);
+    background-color: var(--lightgray);
+    width: fit-content;
+    transition: var(--main-transition);
+}
+
+#sidebar ul > div .wc-block-components-filter-reset-button:hover {
+    background-color: var(--light);
+}
+
 /* Single product page */
 
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper img {
@@ -269,6 +456,7 @@ nav.woocommerce-MyAccount-navigation {
 
 .woocommerce-MyAccount-content {
     .u-columns.woocommerce-Addresses.col2-set.addresses {
+
         .u-column1.col-1.woocommerce-Address,
         .u-column2.col-2.woocommerce-Address {
             float: none !important;

@@ -196,7 +196,6 @@ header.content-header {
     }
 }
 
-
 .tags {
     padding: 1rem 0;
     display: flex;
@@ -226,4 +225,8 @@ header.content-header {
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem 0;
+}
+
+.height-fit-content {
+    height: fit-content;
 }

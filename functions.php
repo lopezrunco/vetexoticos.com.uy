@@ -70,10 +70,17 @@ function starterwptheme_widget_areas()
 
 add_action('widgets_init', 'starterwptheme_widget_areas');
 
-// function vetexoticos_woocommerce_support() {
-//     add_theme_support( 'woocommerce' );
-// }
-// add_action( 'after_setup_theme', 'vetexoticos_woocommerce_support' );
+function custom_woocommerce_product_query( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && is_shop() ) {
+        $query->set( 'posts_per_page', 12 );
+    }
+}
+add_action( 'pre_get_posts', 'custom_woocommerce_product_query' );
+
+function vetexoticos_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'vetexoticos_woocommerce_support' );
 
 function vetexoticos_enqueue_styles() {
     // Enqueue the theme's main stylesheet
