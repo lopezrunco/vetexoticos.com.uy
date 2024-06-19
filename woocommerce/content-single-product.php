@@ -81,8 +81,6 @@ if ( post_password_required() ) {
         </div>
     </div>
 
-
-
     <?php
     /**
      * Hook: woocommerce_after_single_product_summary.
@@ -91,6 +89,15 @@ if ( post_password_required() ) {
      * @hooked woocommerce_upsell_display - 15
      * @hooked woocommerce_output_related_products - 20
      */
+
+    // Custom number of related products
+    function custom_related_products_args( $args ) {
+        $args['posts_per_page'] = 3;
+        $args['columns'] = 3;
+        return $args;
+    }
+    add_filter( 'woocommerce_output_related_products_args', 'custom_related_products_args' );
+    
     do_action( 'woocommerce_after_single_product_summary' );
     ?>
 </div>
