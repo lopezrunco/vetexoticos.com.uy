@@ -1,4 +1,5 @@
-.comments-wrapper {
+.comments-wrapper,
+.woocommerce-Reviews {
     margin: 5rem 0 0;
 
     .comments-header {
@@ -22,7 +23,8 @@
         border: 1px solid var(--lightgray);
         border-radius: var(--border-radius);
 
-        .comment-author.vcard {
+        .comment-author.vcard,
+        .comment_container {
             font-weight: bold;
 
             img {
@@ -41,6 +43,8 @@
         }
 
         .reply {
+            margin-top: 1rem;
+            
             a {
                 border: 1px solid var(--light);
                 border-radius: var(--border-radius);

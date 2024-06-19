@@ -245,7 +245,11 @@ form.woocommerce-ordering select.orderby {
 
 /* Single product page */
 
-.woocommerce div.product div.images .woocommerce-product-gallery__wrapper img {
+.product .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border: 1px solid var(--lightgray);
     border-radius: var(--border-radius);
 }
 
@@ -263,6 +267,27 @@ form.woocommerce-ordering select.orderby {
     font-size: 2rem;
 }
 
+.summary.entry-summary .variations_form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.summary.entry-summary .variations_form .label label {
+    margin-bottom: 0;
+}
+
+.summary.entry-summary .variations_form .value .reset_variations {
+    margin-left: 1rem;
+}
+
+.summary.entry-summary .woocommerce-variation-add-to-cart.variations_button {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .variations select {
     border: 1px solid var(--light);
     border-radius: var(--border-radius);
@@ -273,8 +298,19 @@ form.woocommerce-ordering select.orderby {
     cursor: pointer;
 }
 
-.woocommerce .quantity .qty {
+.woocommerce .quantity .qty,
+.summary.entry-summary .input-text.qty.text {
     width: 6rem;
+}
+
+.summary.entry-summary .single_add_to_cart_button {
+    padding: 0 1rem;
+    font-weight: 700;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
 }
 
 .woocommerce div.product form.cart .button {
@@ -291,6 +327,114 @@ form.woocommerce-ordering select.orderby {
 
 .pswp__caption {
     display: none;
+}
+
+.summary.entry-summary .product_meta {
+    border-top: 1px solid var(--light);
+    margin-top: 2rem;
+    padding-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.summary.entry-summary .product_meta span {
+    font-weight: 700;
+}
+
+.summary.entry-summary .product_meta span > span,
+.summary.entry-summary .product_meta span > a {
+    font-weight: 400;
+}
+
+/* Single products tabs */
+
+.woocommerce-tabs {
+    padding: 4rem 0;
+}
+
+.woocommerce-tabs ul.tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-bottom: 1px solid var(--lightgray);
+}
+
+.woocommerce-tabs ul.tabs li {
+    flex: 1;
+}
+
+.woocommerce-tabs ul.tabs li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem  0;
+    font-weight: 700;
+    border-bottom: 3px solid transparent;
+    transition: all 0.25s ease-in-out;
+}
+
+.woocommerce-tabs ul.tabs li.active a {
+    border-bottom-color: var(--primary);
+}
+
+.woocommerce-tabs .woocommerce-Tabs-panel.woocommerce-Tabs-panel--description,
+.woocommerce-tabs .woocommerce-Tabs-panel.woocommerce-Tabs-panel--additional_information {
+    padding: 5rem 0;
+}
+
+.woocommerce-tabs div.woocommerce-Tabs-panel {
+    border-top: none;
+}
+
+.woocommerce-tabs div.woocommerce-Tabs-panel h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.woocommerce-tabs div.woocommerce-Tabs-panel table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--border-radius);
+}
+
+.woocommerce-tabs div.woocommerce-Tabs-panel th,
+.woocommerce-tabs div.woocommerce-Tabs-panel td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.woocommerce-tabs div.woocommerce-Tabs-panel td p {
+    margin-bottom: 0;
+}
+
+.woocommerce-tabs div.woocommerce-Tabs-panel ol.commentlist {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Reviews tab */
+
+.woocommerce-tabs div.woocommerce-Tabs-panel ol.commentlist .comment-text {
+    font-weight: 400;
+}
+
+.woocommerce-tabs div.woocommerce-Tabs-panel .comment-reply-title {
+    font-size: 1.5rem;
+}
+
+.woocommerce-tabs div.woocommerce-Tabs-panel .comment-form-rating .stars a {
+    padding: .5rem 1rem;
+    margin: .5rem 0 0 0;
+    color: var(--dark);
+    border: 1px solid var(--light);
+    border-radius: var(--border-radius);
+    transition: var(--main-transition);
+    display: inline-block;
+}
+
+.woocommerce-tabs div.woocommerce-Tabs-panel .comment-form-rating .stars a:hover {
+    background-color: var(--lightgray);
 }
 
 /* Cart page */
