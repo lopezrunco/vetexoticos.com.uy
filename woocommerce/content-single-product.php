@@ -43,6 +43,10 @@ if ( post_password_required() ) {
              * @hooked woocommerce_show_product_images - 20
              */
             do_action( 'woocommerce_before_single_product_summary' );
+
+            // Product image modal custom hook
+            do_action('woocommerce_custom_product_image_modal');
+
             ?>
         </div>
         <div class="col-md-6">

@@ -82,6 +82,41 @@ function vetexoticos_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'vetexoticos_woocommerce_support' );
 
+function custom_product_image_modal() {
+    ?>
+    <!-- Modal Template -->
+    <div class="modal fade" id="productImageModal" tabindex="-1" aria-labelledby="productImageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Product Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const productImages = document.querySelectorAll('.woocommerce-product-gallery__image a');
+            productImages.forEach(function (image) {
+                image.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const modalImage = document.getElementById('modalImage');
+                    modalImage.src = this.querySelector('img').src;
+                    const modal = new bootstrap.Modal(document.getElementById('productImageModal'));
+                    modal.show();
+                });
+            });
+        });
+    </script>
+    <?php
+}
+
+add_action( 'woocommerce_custom_product_image_modal', 'custom_product_image_modal' );
+
 function vetexoticos_enqueue_styles() {
     // Enqueue the theme's main stylesheet
     wp_enqueue_style( 'vetexoticos-style', get_stylesheet_uri() );
