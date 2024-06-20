@@ -69,7 +69,7 @@
     </header>
 
     <div class="main-wrapper">
-        <?php if (!is_front_page()) : ?>
+        <?php if (!is_front_page() && !is_404() ) : ?>
             <header class="page-title bg-primary">
                 <div class="paws-overlay">
                 <h2 class="heading">
