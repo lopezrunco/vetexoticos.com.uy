@@ -323,10 +323,11 @@ form.woocommerce-ordering select.orderby {
 .woocommerce .quantity .qty,
 .summary.entry-summary .input-text.qty.text {
     width: 6rem;
+    margin-bottom: .5rem;
 }
 
 .summary.entry-summary .single_add_to_cart_button {
-    padding: 0 1rem;
+    padding: .5rem 1rem;
     font-weight: 700;
     background-color: var(--primary);
     color: var(--white);
