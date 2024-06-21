@@ -4,7 +4,7 @@ get_template_part('template-parts/top-hero');
 get_template_part('template-parts/hero');
 get_template_part('template-parts/latest-products');
 
-// Why us section variables
+// Start Why us section variables and template part
 $wu_left_subtitle = '¿Por qué elegirnos?';
 $wu_left_text = 'En vetexoticos.uy nos hemos preparado para brindar una atención integral y especializada en animales no convencionales. Somos un equipo joven y altamente capacitado para resolver las necesidades de nuestros pequeños pacientes. ';
 $wu_right_subtitle = 'Nuestra filosofía';
@@ -13,24 +13,36 @@ $about_page = get_page_by_path('nosotros');
 $wu_button_url = get_permalink($about_page->ID);
 $wu_button_text = 'Más sobre nosotros';
 $wu_icon = 'fa-bone';
-// Include the why-us template part with variables
 include get_template_directory() . '/template-parts/why-us.php';
+// End Why us section variables and template part
 
-// Call to action section variables
+// Start Call to action section variables and template part
 $cta_subtitle = 'Encontrá los mejores suplementos';
 $cta_title = '¿Por qué elegirnos?';
 $about_page = get_page_by_path('nosotros');
 $cta_button_url = get_permalink($about_page->ID);
 $cta_button_text = 'Saber más sobre nosotros';
 $cta_icon = 'fa-bone';
-// Include the call-to-action template part with variables
 include get_template_directory() . '/template-parts/call-to-action.php';
+// Emd Call to action section variables and template part
 
 get_template_part('template-parts/product-categories');
 get_template_part('template-parts/food-brands');
 get_template_part('template-parts/testimonials');
 get_template_part('template-parts/product-by-category');
-get_template_part('template-parts/featured-services');
+
+// Start Featured services section variables and template part
+$fs_service1_text = 'Asesoramiento en manejo y alimentación';
+$fs_service1_icon = 'fa-solid fa-cat';
+$fs_service2_text = 'Medicina preventiva';
+$fs_service2_icon = 'fa-solid fa-syringe';
+$fs_service3_text = 'Teleconsulta';
+$fs_service3_icon = 'fa-solid fa-laptop';
+$fs_service4_text = 'Asistencia post venta';
+$fs_service4_icon = 'fa-solid fa-bandage';
+include get_template_directory() . '/template-parts/featured-services.php';
+// End Featured services section variables and template part
+
 get_template_part('template-parts/latest-news');
 get_footer();
 ?>
