@@ -30,19 +30,7 @@ get_template_part('template-parts/product-categories');
 get_template_part('template-parts/food-brands');
 get_template_part('template-parts/testimonials');
 get_template_part('template-parts/product-by-category');
-
-// Start Featured services section variables and template part
-$fs_service1_text = 'Asesoramiento en manejo y alimentación';
-$fs_service1_icon = 'fa-solid fa-cat';
-$fs_service2_text = 'Medicina preventiva';
-$fs_service2_icon = 'fa-solid fa-syringe';
-$fs_service3_text = 'Teleconsulta';
-$fs_service3_icon = 'fa-solid fa-laptop';
-$fs_service4_text = 'Asistencia post venta';
-$fs_service4_icon = 'fa-solid fa-bandage';
-include get_template_directory() . '/template-parts/featured-services.php';
-// End Featured services section variables and template part
-
+get_template_part('template-parts/featured-services');
 get_template_part('template-parts/latest-news');
 get_footer();
 ?>
