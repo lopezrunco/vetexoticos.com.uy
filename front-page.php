@@ -2,8 +2,19 @@
 get_header();
 get_template_part('template-parts/top-hero');
 get_template_part('template-parts/hero');
-get_template_part('template-parts/bottom-hero');
 get_template_part('template-parts/latest-products');
+
+// Why us section variables
+$wu_left_subtitle = '¿Por qué elegirnos?';
+$wu_left_text = 'En vetexoticos.uy nos hemos preparado para brindar una atención integral y especializada en animales no convencionales. Somos un equipo joven y altamente capacitado para resolver las necesidades de nuestros pequeños pacientes. ';
+$wu_right_subtitle = 'Nuestra filosofía';
+$wu_right_text = 'Confiamos en la formación permanente, sumada al respeto y cariño por nuestros pacientes.';
+$about_page = get_page_by_path('nosotros');
+$wu_button_url = get_permalink($about_page->ID);
+$wu_button_text = 'Más sobre nosotros';
+$wu_icon = 'fa-bone';
+// Include the why-us template part with variables
+include get_template_directory() . '/template-parts/why-us.php';
 
 // Call to action section variables
 $cta_subtitle = 'Encontrá los mejores suplementos';
