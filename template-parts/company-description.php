@@ -5,7 +5,7 @@
                 <img 
                     width="100%" 
                     class="border-radius mb-4" 
-                    src="<?php echo get_template_directory_uri()?> /assets/images/vetexoticos-nosotros.jpg" alt="Imagen de nosotros" 
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/vetexoticos-nosotros.jpg" alt="Imagen de nosotros" 
                 />
                 <h5 class="mb-4">
                     Somos una clínica dedicada exclusivamente a la atención médica y quirúrgica de animales de compañía no tradicionales.
