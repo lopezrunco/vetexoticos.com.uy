@@ -1,4 +1,7 @@
-<?php get_template_part('template-parts/bottom'); ?>
+<?php 
+get_template_part('template-parts/bottom'); 
+get_template_part('template-parts/whatsapp-link'); 
+?>
 
 <footer class="footer text-center py-3 theme-bg-dark">
     <small>
