@@ -1,7 +1,6 @@
 <?php
 get_header();
-get_template_part('template-parts/top-hero');
-get_template_part('template-parts/hero');
+get_template_part('template-parts/image-slider');
 get_template_part('template-parts/latest-products');
 
 // Start Why us section variables and template part
