@@ -45,6 +45,13 @@ small {
     color: var(--darkwhite) !important;
 }
 
+.accordion-button:not(.collapsed) {
+    background-color: var(--secondary) !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
 .main-wrapper {
     background: var(--white);
 
