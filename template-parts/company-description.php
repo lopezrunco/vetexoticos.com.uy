@@ -15,6 +15,15 @@
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-lg-6">
+                        <h4>Equipo</h4>
+                        <p>
+                            Vetexoticos.uy fue fundado en 2019 por la Dra. Carina Esteves, quien desde pequeña tuvo interés por los animales y día a día sigue formándose con el fin de mejorar la medicina veterinaria de animales no tradicionales en nuestro país.
+                        <p>
+                        </p>  
+                            Actualmente somos un equipo interdisciplinario unido con el fin de promover la salud de nuestros pacientes, brindando no sólo atención clínica sino también diagnósticos paraclínicos y atención quirúrgica en un mismo lugar.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
                         <h4>¿Por qué elegirnos?</h4>
                         <p>
                             En vetexoticos.uy nos hemos preparado para brindar una atención integral y especializada.
@@ -26,13 +35,6 @@
                         <p>
                             Confiamos en la formación permanente, sumada al respeto y cariño por nuestros pacientes.
                         </p>
-                    </div>
-                    <div class="col-lg-6">
-                        <h4>Equipo</h4>
-                        <p>
-                            Vetexoticos.uy fue fundado en 2019 por la Dra. Carina Esteves, quien desde pequeña tuvo interés por los animales y día a día sigue formándose con el fin de mejorar la medicina veterinaria de animales no tradicionales en nuestro país. Actualmente somos un equipo interdisciplinario unido con el fin de promover la salud de nuestros pacientes, brindando no sólo atención clínica sino también diagnósticos paraclínicos y atención quirúrgica en un mismo lugar.
-                        </p>
-
                     </div>
                 </div>
             </div>
