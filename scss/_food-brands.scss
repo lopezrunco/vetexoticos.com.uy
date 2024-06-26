@@ -6,28 +6,30 @@
         overflow: hidden;
 
         .paws-overlay {
-            padding: 4rem 1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: var(--main-transition);
+            .dark-gradient-overlay {
+                padding: 4rem 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: var(--main-transition);
 
-            &:hover {
-                transform: scale(1.025);
-            }
+                &:hover {
+                    transform: scale(1.025);
+                }
 
-            h2 {
-                color: var(--white);
-            }
+                h2 {
+                    color: var(--white);
+                }
 
-            span {
-                color: var(--secondary);
-            }
+                span {
+                    color: var(--secondary);
+                }
 
-            img {
-                max-width: 300px;
+                img {
+                    max-width: 300px;
+                }
             }
         }
     }

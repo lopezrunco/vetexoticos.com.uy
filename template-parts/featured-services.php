@@ -14,16 +14,18 @@ if (file_exists($json_file)) {
 
 	<section class="featured-services bg-primary">
 		<div class="paws-overlay">
-			<article class="container">
-				<div class="row">
-					<?php foreach( $selected_services as $service ) : ?>
-						<div class="col-lg-3 mb-4 mb-lg-0">
-							<i class="<?php echo esc_html($service->icon) ?>"></i>
-							<p><?php echo esc_html($service->title) ?></p>
-						</div>
-					<?php endforeach; ?>
-				</div>
-			</article>
+			<div class="dark-gradient-overlay">
+				<article class="container">
+					<div class="row">
+						<?php foreach ($selected_services as $service) : ?>
+							<div class="col-lg-3 mb-4 mb-lg-0">
+								<i class="<?php echo esc_html($service->icon) ?>"></i>
+								<p><?php echo esc_html($service->title) ?></p>
+							</div>
+						<?php endforeach; ?>
+					</div>
+				</article>
+			</div>
 		</div>
 	</section>
 

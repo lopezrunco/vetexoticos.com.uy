@@ -7,6 +7,10 @@
     box-sizing: border-box
 }
 
+::selection {
+    background-color: var(--secondary);
+}
+
 html {
     line-height: 1.15;
 }
@@ -62,6 +66,11 @@ small {
 
 .gray-overlay {
     background-color: #00000063;
+}
+
+.dark-gradient-overlay {
+    background: #00000063;
+    background: linear-gradient(0deg, var(--dark-primary) 0%, rgba(0,0,0,0) 100%);
 }
 
 .paws-overlay {
