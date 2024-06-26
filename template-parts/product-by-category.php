@@ -1,7 +1,7 @@
 <section class="product-grid bg-light">
 	<article class="container">
 		<?php
-		$category_slug = 'Accesorios';
+		$category_slug = 'Aves';
 		$category = get_term_by('slug', $category_slug, 'product_cat');
 
 		$latest_products = wc_get_products(
