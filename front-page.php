@@ -31,5 +31,6 @@ get_template_part('template-parts/testimonials');
 get_template_part('template-parts/product-by-category');
 get_template_part('template-parts/featured-services');
 get_template_part('template-parts/latest-news');
+get_template_part('template-parts/instagram-feed');
 get_footer();
 ?>

@@ -2,12 +2,16 @@ header {
     nav {
         border-bottom: 1px solid var(--light);
 
-        img.main-logo {
-            max-width: 200px;
-        }
-
-        form.searchform {
-            padding: 1rem ;
+        .container {
+            max-width: var(--content-max-width);
+            
+            img.main-logo {
+                max-width: 200px;
+            }
+            
+            form.searchform {
+                padding: 1rem ;
+            }
         }
     }
 }

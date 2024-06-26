@@ -2,17 +2,21 @@
     background-color: var(--lightgray);
     padding: .6rem 0;
 
-    a {
-        i {
-            font-size: .9rem;
-        }
-    }
+    .container {
+        max-width: var(--content-max-width);
 
-    .account-options {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 1.4rem;
+        a {
+            i {
+                font-size: .9rem;
+            }
+        }
+
+        .account-options {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.4rem;
+        }
     }
 }
