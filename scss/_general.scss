@@ -8,7 +8,8 @@
 }
 
 ::selection {
-    background-color: var(--secondary);
+    background-color: var(--dark-primary);
+    color: var(--light);
 }
 
 html {
@@ -70,7 +71,7 @@ small {
 
 .dark-gradient-overlay {
     background: #00000063;
-    background: linear-gradient(0deg, var(--dark-primary) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(0deg, var(--dark-primary) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .paws-overlay {
@@ -119,16 +120,14 @@ small {
     position: sticky;
     z-index: 10;
     top: 0;
-    transition: all .2s;
     text-align: center;
+    background-color: var(--dark-primary);
+    padding: .5rem 0;
+    transition: all .2s;
 
-    .paws-overlay {
-        padding: .3rem 0;
-
-        .heading {
-            color: var(--white);
-            margin-bottom: 0;
-        }
+    .heading {
+        color: var(--light);
+        margin-bottom: 0;
     }
 }
 

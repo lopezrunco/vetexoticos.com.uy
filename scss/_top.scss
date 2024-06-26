@@ -1,6 +1,7 @@
 .top {
-    background-color: var(--lightgray);
     padding: .6rem 0;
+    background-color: var(--dark-primary);
+    color: var(--light);
 
     .container {
         max-width: var(--content-max-width);
@@ -17,6 +18,12 @@
             justify-content: flex-end;
             align-items: center;
             gap: 1.4rem;
+
+            a {
+                i {
+                    color: var(--light);
+                }
+            }
         }
     }
 }

@@ -14,10 +14,7 @@
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <?php
-    wp_head();
-    ?>
-
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -43,13 +40,13 @@
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg bg-light py-lg-0">
+        <nav class="navbar navbar-expand-xl bg-primary py-lg-0">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                    <img class="main-logo" src="https://vetexoticos.uy/wp-content/uploads/2024/06/logo.png" alt="Logo Vetexoticos">
+                    <img class="main-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/vetexoticos-inverted.jpg" alt="Vetexoticos logo" />
                 </a>
                 <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fa-solid fa-bars menu-icon"></i>
                 </button>
                 <div class="collapse navbar-collapse py-3" id="navbarSupportedContent">
                     <?php
@@ -70,13 +67,9 @@
 
     <div class="main-wrapper">
         <?php if (!is_front_page() && !is_404() ) : ?>
-            <header class="page-title bg-primary">
-                <div class="paws-overlay">
+            <header class="page-title">
                 <h2 class="heading">
-                    <?php
-                    the_title();
-                    ?>
+                    <?php the_title(); ?>
                 </h2>
-                </div>
             </header>
         <?php endif; ?>
