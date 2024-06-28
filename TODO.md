@@ -1,7 +1,5 @@
 # ToDo List
 
-This is a more detailed and more updatable ToDo list with smaller changes.
-
 ## Features
 - [ ] Configure Instagram feed.
 - [ ] Apply category filter using the two main categories "Especie" & "Productos" and showing animal icons.
@@ -17,3 +15,5 @@ This is a more detailed and more updatable ToDo list with smaller changes.
 - [ ] Update image slider layout to be content-height.
 - [ ] In mobile version, make long product and category lists like horizontal scrolls.
 - [ ] Integrate Google analytics.
+- [ ] Create new product card more friendly woth both poroduct with white BG or not.
+- [ ] Change "Search" text for search icon in search boxs.

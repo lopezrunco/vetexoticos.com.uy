@@ -127,3 +127,5 @@ Leave the content area blank or add a brief description for reference and publis
 - [ ] Incorporate Social Media Sharing Features
 - [ ] Enhance User Account Dashboard Features
 - [ ] Implement Advanced Analytics for Sales Tracking
+
+A more detailed and updatable roadmap in the [ToDo list](./TODO.md).
