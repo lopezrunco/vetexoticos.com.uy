@@ -5,8 +5,8 @@
 - [ ] Apply category filter using the two main categories "Especie" & "Productos" and showing animal icons. Delete other filters (Dimensions, type etc)
 - [ ] Add brand slider linkeable to brand filter.
 - [ ] Fixed navbar.
-- [ ] Remove blog.
-- [ ] Add style to empty cart suggestions.
+- [X] Remove blog.
+- [X] Add style to empty cart suggestions.
 
 ## Bugs
 - [ ] Adjust layout heights after content-width update.

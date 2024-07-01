@@ -32,7 +32,7 @@ do_action('woocommerce_before_main_content');
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-8 col-xl-9">
                 <?php
                 /**
                  * Hook: woocommerce_shop_loop_header.
@@ -87,7 +87,7 @@ do_action('woocommerce_before_main_content');
                 }
                 ?>
             </div>
-            <div class="col-lg-3 height-fit-content bg-light p-4 border-radius">
+            <div class="col-lg-4 col-xl-3 height-fit-content p-4">
                 <?php
                 /**
                  * Hook: woocommerce_sidebar.
