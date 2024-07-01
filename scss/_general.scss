@@ -78,6 +78,10 @@ small {
     background-image: url('./assets/images/paw-pattern.png');
 }
 
+.box-shadow {
+    box-shadow: var(--box-shadow);
+}
+
 .section-title {
     margin: 0 auto;
     margin-bottom: 3rem;

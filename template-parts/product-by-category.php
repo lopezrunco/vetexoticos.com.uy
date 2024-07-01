@@ -28,7 +28,7 @@
 			echo '<div class="row">';
 			foreach ($latest_products as $product) {
 				?>
-				<div class="col-lg-3 mb-4">
+				<div class="col-sm-6 col-lg-4 col-xl-3 mb-4">
 					<div class="product-wrapper">
 						<a href="<?php echo esc_url($product->get_permalink()); ?>">
 							<?php echo $product->get_image(); ?>
