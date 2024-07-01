@@ -117,6 +117,20 @@ function custom_product_image_modal() {
 
 add_action( 'woocommerce_custom_product_image_modal', 'custom_product_image_modal' );
 
+function woo_related_products_limit() {
+    global $product;
+        $args['posts_per_page'] = 6;
+        return $args;
+}
+
+add_filter( 'woocommerce_output_related_products_args', 'related_products_args', 20 );
+
+function related_products_args( $args ) {
+    $args['posts_per_page'] = 4;
+    $args['columns'] = 2;
+    return $args;
+}
+
 function vetexoticos_enqueue_styles() {
     // Enqueue the theme's main stylesheet
     wp_enqueue_style( 'vetexoticos-style', get_stylesheet_uri() );
