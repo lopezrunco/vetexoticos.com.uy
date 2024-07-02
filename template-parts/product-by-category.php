@@ -1,4 +1,4 @@
-<section class="product-grid bg-light">
+<section class="product-grid">
 	<article class="container">
 		<?php
 		$category_slug = 'Aves';

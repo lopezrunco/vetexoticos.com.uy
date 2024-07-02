@@ -1,15 +1,15 @@
 # ToDo List
 
 ## Features
+- [ ] Add brand slider linkeable to brand filter.
 - [ ] Configure Instagram feed.
 - [ ] Apply category filter using the two main categories "Especie" & "Productos" and showing animal icons. Delete other filters (Dimensions, type etc)
-- [ ] Add brand slider linkeable to brand filter.
 - [ ] Fixed navbar.
 - [X] Remove blog.
 - [X] Add style to empty cart suggestions.
 
 ## Bugs
-- [ ] Adjust layout heights after content-width update.
+- [X] Adjust layout heights after content-width update.
 - [ ] Page title bar is not working properly sometimes (shop page, search results).
 
 ## Enhancements

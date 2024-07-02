@@ -19,7 +19,6 @@ $cta_icon = 'fa-store';
 include get_template_directory() . '/template-parts/call-to-action.php';
 // Emd Call to action section variables and template part
 
-get_template_part('template-parts/our-staff');
 get_footer(); 
 
 ?>
