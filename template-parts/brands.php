@@ -12,34 +12,35 @@ $brands = get_terms(array(
     'hide_empty' => false
 ));
 
+$no_image_placeholder = get_template_directory_uri() . '/assets/images/no-image-default.jpg';
+
 if (!empty($brands) && !is_wp_error($brands)) : ?>
-    <section class="brands-slider">
+    <!-- Desktop Version (Grid Layout) -->
+    <section class="brands-slider d-none d-lg-block">
         <article class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Nuestras marcas</h2>
+                </div>
+            </div>
             <div class="row">
                 <?php foreach ($brands as $brand) :
                     $term_slug = $brand->slug;
                     $image_name = isset($images_names[$term_slug]) ? $images_names[$term_slug] : null;
-                    $image_url = $image_name ? get_template_directory_uri() . '/assets/images/brands/' . $image_name : null;
+                    $image_url = $image_name ? get_template_directory_uri() . '/assets/images/brands/' . $image_name : $no_image_placeholder;
                     // Construct the link to filter product by brand.
                     $brand_link = home_url('/shop/?filter_marca=' . $term_slug . '&query_type_marca=or');
-
                 ?>
                     <div class="col-sm-4 col-lg-2">
                         <div class="brand-wrapper p-4">
-                            <?php if ($image_url) : ?>
-                                <a href="<?php echo esc_url($brand_link); ?>">
-                                    <img 
-                                        width="100%" 
-                                        class="border-radius" 
-                                        src="<?php echo esc_url($image_url); ?>" 
-                                        alt="<?php echo esc_attr($brand->name); ?>" 
-                                    />
-                                </a>
-                            <?php else : ?>
-                                <a href="<?php echo esc_url($brand_link); ?>">
-                                    <h2><?php echo esc_html($brand->name); ?></h2>
-                                </a>
-                            <?php endif; ?>
+                            <a href="<?php echo esc_url($brand_link); ?>">
+                                <img 
+                                    width="100%" 
+                                    class="border-radius box-shadow" 
+                                    src="<?php echo esc_url($image_url); ?>" 
+                                    alt="<?php echo esc_attr($brand->name); ?>" 
+                                />
+                            </a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -47,4 +48,40 @@ if (!empty($brands) && !is_wp_error($brands)) : ?>
         </article>
     </section>
 
+    <!-- Mobile Version (Bootstrap Carousel) -->
+    <section class="brands-slider d-block d-lg-none">
+        <article class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Nuestras marcas</h2>
+                </div>
+            </div>
+            <div id="brandCarouselMobile" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <?php foreach ($brands as $index => $brand) :
+                        $term_slug = $brand->slug;
+                        $image_name = isset($images_names[$term_slug]) ? $images_names[$term_slug] : null;
+                        $image_url = $image_name ? get_template_directory_uri() . '/assets/images/brands/' . $image_name : $no_image_placeholder;
+                        $brand_link = home_url('/shop/?filter_marca=' . $term_slug . '&query_type_marca=or');
+                    ?>
+                        <div class="carousel-item px-5 <?php echo $index === 0 ? 'active' : ''; ?>">
+                            <a href="<?php echo esc_url($brand_link); ?>">
+                                <img 
+                                    class="d-block w-100 border-radius box-shadow" 
+                                    src="<?php echo esc_url($image_url); ?>" 
+                                    alt="<?php echo esc_attr($brand->name); ?>" 
+                                />
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <a class="carousel-control-prev" href="#brandCarouselMobile" role="button" data-slide="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#brandCarouselMobile" role="button" data-slide="next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </article>
+    </section>
 <?php endif; ?>

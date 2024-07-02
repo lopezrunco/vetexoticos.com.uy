@@ -16,7 +16,6 @@ include get_template_directory() . '/template-parts/why-us.php';
 // End Why us section variables and template part
 
 get_template_part('template-parts/product-categories');
-get_template_part('template-parts/food-brands');
 get_template_part('template-parts/product-by-category');
 get_template_part('template-parts/featured-services');
 get_template_part('template-parts/instagram-feed');

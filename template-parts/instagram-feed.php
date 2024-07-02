@@ -1,4 +1,4 @@
-<section>
+<section class="bg-light">
     <article class="container">
         <div class="row">
             <div class="col-12">
