@@ -5,12 +5,16 @@
 - [ ] Configure Instagram feed.
 - [ ] Apply category filter using the two main categories "Especie" & "Productos" and showing animal icons. Delete other filters (Dimensions, type etc)
 - [ ] Fixed navbar.
+- [ ] Add No search result page.
 - [X] Remove blog.
 - [X] Add style to empty cart suggestions.
 
 ## Bugs
 - [X] Adjust layout heights after content-width update.
-- [ ] Page title bar is not working properly sometimes (shop page, search results).
+- [X] Page title bar is not working properly sometimes (shop page, search results).
+- [ ] Category images not visibles in production.
+- [ ] Product secondary images to small in production.
+- [ ] Search box in menu not showing all horizontally.
 
 ## Enhancements
 - [ ] Update image slider layout to be content-height.
@@ -19,3 +23,4 @@
 - [ ] Integrate Google analytics.
 - [ ] Create new product card more friendly woth both poroduct with white BG or not.
 - [ ] Change "Search" text for search icon in search boxs.
+- [ ] Remove reviews.

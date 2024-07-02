@@ -104,11 +104,27 @@
         </nav>
     </header>
 
+
+
     <div class="main-wrapper">
         <?php if (!is_front_page() && !is_404()) : ?>
             <header class="page-title">
                 <h2 class="heading">
-                    <?php the_title(); ?>
+                    <?php
+                        if (function_exists('is_shop') && is_shop()) {
+                            echo 'Tienda';
+                        } elseif (is_search()) {
+                            printf('Resultados de: %s', get_search_query());
+                        } elseif (is_archive()) {
+                            the_archive_title();
+                        } elseif (is_single()) {
+                            the_title();
+                        } elseif (is_page()) {
+                            the_title();
+                        } else {
+                            the_title();
+                        }
+                    ?>
                 </h2>
             </header>
         <?php endif; ?>
