@@ -18,7 +18,7 @@ if (file_exists($json_file)) {
 				<article class="container">
 					<div class="row">
 						<?php foreach ($selected_services as $service) : ?>
-							<div class="col-lg-3 mb-4 mb-lg-0">
+							<div class="col-lg-3 mb-5 mb-lg-0">
 								<i class="<?php echo esc_html($service->icon) ?>"></i>
 								<p><?php echo esc_html($service->title) ?></p>
 							</div>
