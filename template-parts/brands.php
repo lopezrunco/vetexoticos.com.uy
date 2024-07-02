@@ -29,7 +29,7 @@ if (!empty($brands) && !is_wp_error($brands)) : ?>
                     $image_name = isset($images_names[$term_slug]) ? $images_names[$term_slug] : null;
                     $image_url = $image_name ? get_template_directory_uri() . '/assets/images/brands/' . $image_name : $no_image_placeholder;
                     // Construct the link to filter product by brand.
-                    $brand_link = home_url('/shop/?filter_marca=' . $term_slug . '&query_type_marca=or');
+                    $brand_link = home_url('/tienda/?filter_marca=' . $term_slug . '&query_type_marca=or');
                 ?>
                     <div class="col-sm-4 col-lg-2">
                         <div class="brand-wrapper p-4">
@@ -62,7 +62,7 @@ if (!empty($brands) && !is_wp_error($brands)) : ?>
                         $term_slug = $brand->slug;
                         $image_name = isset($images_names[$term_slug]) ? $images_names[$term_slug] : null;
                         $image_url = $image_name ? get_template_directory_uri() . '/assets/images/brands/' . $image_name : $no_image_placeholder;
-                        $brand_link = home_url('/shop/?filter_marca=' . $term_slug . '&query_type_marca=or');
+                        $brand_link = home_url('/tienda/?filter_marca=' . $term_slug . '&query_type_marca=or');
                     ?>
                         <div class="carousel-item px-5 <?php echo $index === 0 ? 'active' : ''; ?>">
                             <a href="<?php echo esc_url($brand_link); ?>">
