@@ -1,6 +1,5 @@
 .product-categories {
     .product-categories-container {
-        display: grid;
         gap: 1rem;
 
         .product-category-item-wrapper {
@@ -36,20 +35,30 @@
             }
         }
     }
-}
 
-@media screen and (min-width: 992px) {
-    .product-categories {
-        .product-categories-container {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-}
+    .carousel-inner {
+        .carousel-item {
+            .image-wrapper {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 auto;
+                margin-bottom: 1rem;
 
-@media screen and (min-width: 1200px) {
-    .product-categories {
-        .product-categories-container {
-            grid-template-columns: repeat(6, 1fr);
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    transition: var(--main-transition);
+
+                    &:hover,
+                    &:active {
+                        transform: scale(1.1);
+                    }
+                }
+            }
         }
     }
 }
