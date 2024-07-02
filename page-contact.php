@@ -12,10 +12,10 @@ get_header();
             <div class="col-lg-7 offset-lg-1 mb-5 mb-lg-0">
                 <?php 
                     // Dev form
-                    echo do_shortcode('[contact-form-7 id="39d3242" title="Contact form 1"]'); 
+                    // echo do_shortcode('[contact-form-7 id="39d3242" title="Contact form 1"]'); 
 
                     // Prod form
-                    // echo do_shortcode('[contact-form-7 id="949b6a3" title="Formulario de contacto 1"]'); 
+                    echo do_shortcode('[contact-form-7 id="949b6a3" title="Formulario de contacto 1"]'); 
                 ?>
             </div>
         </div>
