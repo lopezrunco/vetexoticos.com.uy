@@ -215,6 +215,14 @@ header.content-header {
     }
 }
 
+.position-arrow {
+    background: var(--dark);
+    padding: .8rem;
+    border-radius: var(--border-radius);
+    color: var(--white);
+    transition: var(--main-transition);
+}
+
 .tags {
     padding: 1rem 0;
     display: flex;

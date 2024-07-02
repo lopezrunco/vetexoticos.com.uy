@@ -52,12 +52,12 @@ if (!empty($brands) && !is_wp_error($brands)) : ?>
     <section class="brands-slider d-block d-lg-none">
         <article class="container">
             <div class="row">
-                <div class="section-title">
+                <div class="section-title mb-0">
                     <h2>Nuestras marcas</h2>
                 </div>
             </div>
             <div id="brandCarouselMobile" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner py-5">
                     <?php foreach ($brands as $index => $brand) :
                         $term_slug = $brand->slug;
                         $image_name = isset($images_names[$term_slug]) ? $images_names[$term_slug] : null;
@@ -76,10 +76,10 @@ if (!empty($brands) && !is_wp_error($brands)) : ?>
                     <?php endforeach; ?>
                 </div>
                 <a class="carousel-control-prev" href="#brandCarouselMobile" role="button" data-slide="prev">
-                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left position-arrow"></i>
                 </a>
                 <a class="carousel-control-next" href="#brandCarouselMobile" role="button" data-slide="next">
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i class="fa-solid fa-chevron-right position-arrow"></i>
                 </a>
             </div>
         </article>
