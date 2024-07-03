@@ -139,3 +139,17 @@ function vetexoticos_enqueue_styles() {
     wp_enqueue_style( 'custom-woocommerce', get_template_directory_uri() . '/custom-woocommerce.css', array('vetexoticos-style') );
 }
 add_action( 'wp_enqueue_scripts', 'vetexoticos_enqueue_styles' );
+
+function custom_search_form( $form ) {
+    $form = '
+    <form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '">
+        <div>
+            <label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+            <input type="text" value="' . get_search_query() . '" name="s" id="s" />
+            <button type="submit" id="searchsubmit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </form>';
+
+    return $form;
+}
+add_filter( 'get_search_form', 'custom_search_form' );

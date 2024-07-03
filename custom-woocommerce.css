@@ -1,5 +1,22 @@
 /* Override WooCommerce styles */
 
+/* Search form */
+
+.searchform button {
+    outline: none;
+    border: none;
+    background: var(--dark-primary);
+    color: var(--light);
+    padding: 0.4rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--main-transition);
+}
+
+.searchform button:hover,
+.searchform button:active {
+    background: var(--primary);
+}
+
 /* Shop page */
 
 .woocommerce.columns-4 {
