@@ -59,9 +59,28 @@ small {
 
 .main-wrapper {
     background: var(--white);
+    margin-top: 9.4rem;
 
     .container {
         max-width: var(--content-max-width);
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .main-wrapper {
+        margin-top: 8.3rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .main-wrapper {
+        margin-top: 7.3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-wrapper {
+        margin-top: 8.8rem;
     }
 }
 

@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="fixed-top">
         <div class="top">
             <div class="container">
                 <div class="row">
@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-xl bg-primary py-lg-0">
+        <nav class="navbar  navbar-expand-xl bg-primary py-lg-0">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
                     <img class="main-logo" alt="Logo de Vetexoticos.uy" src="<?php echo get_template_directory_uri(); ?>/assets/images/vetexoticos-inverted.jpg" />
