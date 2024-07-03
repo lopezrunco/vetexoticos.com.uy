@@ -16,7 +16,7 @@ if (file_exists($json_file)) {
 		<div class="paws-overlay">
 			<div class="dark-gradient-overlay">
 				<article class="container">
-					<div class="row">
+					<div class="row m-0">
 						<?php foreach ($selected_services as $service) : ?>
 							<div class="col-lg-3 mb-5 mb-lg-0">
 								<i class="<?php echo esc_html($service->icon) ?>"></i>
