@@ -114,7 +114,7 @@
                         if (function_exists('is_shop') && is_shop()) {
                             echo 'Tienda';
                         } elseif (is_search()) {
-                            printf('Resultados de: %s', get_search_query());
+                            printf('Resultados: %s', get_search_query());
                         } elseif (is_archive()) {
                             the_archive_title();
                         } elseif (is_single()) {
