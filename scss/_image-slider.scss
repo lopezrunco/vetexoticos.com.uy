@@ -1,6 +1,6 @@
 .slider-content {
     position: relative;
-    height: calc(100vh - 120px);
+    height: calc(90vh - 120px);
     overflow: hidden;
     z-index: 1;
 
@@ -30,12 +30,12 @@
 
             .caption {
                 width: 98%;
-                text-align: center;
+                text-align: left;
 
                 h1 {
                     color: var(--white);
                     text-shadow: var(--text-shadow);
-                    font-size: 3rem;
+                    font-size: 2rem;
 
                     &::after {
                         display: none;
@@ -46,6 +46,10 @@
                     margin: 2rem 0;
                     color: var(--white);
                     text-shadow: var(text-shadow);
+                }
+
+                a.btn {
+                    width: fit-content;
                 }
             }
         }
@@ -121,8 +125,8 @@
 
         div {
             display: inline-block;
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             margin: 5px;
             border: 3px solid var(--white-semi-transparent);
             border-radius: 50%;
@@ -169,7 +173,7 @@
                 justify-content: center;
 
                 .caption {
-                    width: 50%;
+                    width: 40%;
                     text-align: left;
 
                     h1 {
@@ -182,11 +186,6 @@
                             display: inline-block;
                         }
                     }
-
-                    a.btn {
-                        width: fit-content;
-                    }
-
                 }
             }
         }
