@@ -17,6 +17,6 @@
 - [ ] Add fade in FX.
 - [ ] Minimize Wapp box in desktop.
 - [X] Create email contacto@vetexoticos.uy.
-- [ ] Delete everything location related.
+- [X] Delete everything location related.
 - [ ] About us: More call to action style text. Quote with secondary color.
 - [ ] Add captcha to forms.

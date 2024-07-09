@@ -23,5 +23,4 @@ get_header();
 </section>
 
 <?php
-get_template_part('template-parts/map');
 get_footer();

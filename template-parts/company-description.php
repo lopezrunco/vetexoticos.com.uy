@@ -21,7 +21,7 @@
                     <div class="col-lg-6">
                         <h4>¿Por qué elegirnos?</h4>
                         <p>
-                            En vetexoticos.uy nos hemos preparado para brindar una atención integral y especializada.
+                            En Vetexoticos.uy nos hemos preparado para brindar una atención integral y especializada.
                         </p>
                         <p>
                             Somos un equipo joven y altamente capacitado para resolver las necesidades de nuestros pequeños pacientes.

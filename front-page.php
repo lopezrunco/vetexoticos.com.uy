@@ -5,7 +5,7 @@ get_template_part('template-parts/latest-products');
 
 // Start Why us section variables and template part
 $wu_left_subtitle = '¿Por qué elegirnos?';
-$wu_left_text = 'En vetexoticos.uy nos hemos preparado para brindar una atención integral y especializada en animales no convencionales. Somos un equipo joven y altamente capacitado para resolver las necesidades de nuestros pequeños pacientes. ';
+$wu_left_text = 'En Vetexoticos.uy nos hemos preparado para brindar una atención integral y especializada en animales no convencionales. Somos un equipo joven y altamente capacitado para resolver las necesidades de nuestros pequeños pacientes. ';
 $wu_right_subtitle = 'Nuestra filosofía';
 $wu_right_text = 'Confiamos en la formación permanente, sumada al respeto y cariño por nuestros pacientes.';
 $about_page = get_page_by_path('nosotros');
