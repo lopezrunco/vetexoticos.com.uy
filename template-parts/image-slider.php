@@ -19,7 +19,7 @@
                     <h1 class="title">¿Te vas de vacaciones? ¡Cuidamos de tu mejor amigo!</h1>
                     <h6 class="subtitle">Contamos con guardería para tu animal de compañía no tradicional, cumpliendo las necesidades de cada especie.</h6>
                     <?php
-                    $hotel_page_url = get_permalink(wc_get_page_id('guarderia'));
+                    $hotel_page_url = get_permalink(get_page_by_path('guarderia'));
                     echo '<a class="btn btn-secondary" href="' . esc_url($hotel_page_url) . '">Más información <i class="fa-regular fa-comment-dots"></i></a>'
                     ?>
                 </div>
@@ -32,13 +32,12 @@
                     <h1 class="title">¡Incorporamos servicio de ecografía! </h1>
                     <h6 class="subtitle">Conocé más</h6>
                     <?php
-                    $services_page_url = get_permalink(wc_get_page_id('servicios'));
-                    echo '<a class="btn btn-secondary" href="' . esc_url($services_page_url) . '">Ecografías <i class="fa-solid fa-magnifying-glass"></i></a>'
+                    $services_page_url = get_permalink(get_page_by_path('servicios'));
+                    echo '<a class="btn btn-secondary" href="' . esc_url($services_page_url) . '">Ver servicios <i class="fa-solid fa-chevron-right"></i></a>'
                     ?>
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- Slider arrow controls -->
