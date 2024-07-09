@@ -30,7 +30,7 @@
             </div>
             <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
                 <h4>Contacto</h4>
-                <a href="mailto:vetexoticosuy@gmail.com"><i class="me-3 fa-solid fa-envelope"></i> vetexoticosuy@gmail.com</a>
+                <a href="mailto:contacto@vetexoticos.uy"><i class="me-3 fa-solid fa-envelope"></i> contacto@vetexoticos.uy</a>
                 <a href="https://maps.app.goo.gl/c8SLfXCbRS7WcVt78" target="_blank"><i class="me-3 fa-solid fa-location-dot"></i> Montevideo, Uruguay</a>
                 <a href="tel:+59891210125"><i class="me-3 fa-solid fa-mobile"></i> 091 210 125</a>
             </div>
