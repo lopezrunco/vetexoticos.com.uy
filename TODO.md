@@ -15,7 +15,7 @@
 - [ ] Integrate Google analytics.
 - [ ] Add loader.
 - [ ] Add fade in FX.
-- [ ] Minimize Wapp box in desktop.
+- [X] Minimize Wapp box in desktop.
 - [X] Create email contacto@vetexoticos.uy.
 - [X] Delete everything location related.
 - [X] About us: More call to action style text. Quote with secondary color.
