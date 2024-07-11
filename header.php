@@ -24,9 +24,7 @@
                 <div class="row">
                     <div class="col-6">
                         <small>
-                            <a class="text-light" href="https://api.whatsapp.com/send/?phone=59891210125&text=Hola%2C+deseo+agendar+una+consulta%E2%80%A6&type=phone_number&app_absent=0" target="_blank">
-                                <i class="fa-brands fa-whatsapp me-1"></i> 091 210 125
-                            </a>
+                            <a class="text-light"><i class="me-3 fa-solid fa-location-dot"></i> Montevideo, Uruguay</a>
                         </small>
                     </div>
                     <div class="col-6">
