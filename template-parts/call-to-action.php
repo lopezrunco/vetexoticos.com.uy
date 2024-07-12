@@ -1,4 +1,7 @@
-<section class="call-to-action">
+<section 
+    style="background-image: url('<?php echo get_template_directory_uri() . $cta_bg_image_url; ?>');"
+    class="call-to-action"
+>
     <article class="gray-overlay">
         <div class="container">
             <div class="content-wrapper">
