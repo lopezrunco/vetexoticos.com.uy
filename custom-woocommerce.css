@@ -147,7 +147,8 @@ ul.products.columns-4 li.product .button:hover {
     color: var(--white);
 }
 
-ul.products.columns-4 li.product .onsale {
+ul.products.columns-4 li.product .onsale,
+.product .onsale {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -380,11 +381,24 @@ form.woocommerce-ordering select.orderby {
     font-size: .8rem;
 }
 
-.summary.entry-summary span.price {
-    padding: .5rem 0 1rem 0;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary);
+/* Original price (Not in sale) */
+.price del .woocommerce-Price-amount {
+    margin-left: .5rem;
+    color: var(--gray);
+    opacity: .3;
+    margin-right: 1rem;
+
+    bdi {
+        text-decoration: line-through !important;
+    }
+}
+
+.summary.entry-summary {
+    span.price {
+        padding: .5rem 0 1rem 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
 }
 
 .woocommerce div.product form.cart .button {
