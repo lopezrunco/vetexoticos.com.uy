@@ -14,7 +14,7 @@
             </div>
             <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
                 <h4>Contacto</h4>
-                <a href="mailto:contacto@vetexoticos.uy"><i class="me-3 fa-solid fa-envelope"></i> contacto@vetexoticos.uy</a>
+                <a><i class="me-3 fa-solid fa-envelope"></i> contacto@vetexoticos.uy</a>
                 <a href="tel:+59891210125"><i class="me-3 fa-solid fa-mobile"></i> 091 210 125</a>
                 <a href="https://m.facebook.com/dra.carinaesteves/" target="_blank"><i class="fa-brands me-3 fa-facebook"></i> @dra.carinaesteves</a>
                 <a href="https://www.instagram.com/vetexoticos.uy/" target="_blank"><i class="fa-brands me-3 fa-instagram"></i> vetexoticos.uy</a>

@@ -1,7 +1,7 @@
 <h3>Empresas</h3>
 <p class="my-4">Pueden contactarnos a través de Whatsapp o por e-mail.</p>
 <div class="contact-info">
-    <a href="mailto:contacto@vetexoticos.uy"><i class="me-3 fa-solid fa-envelope"></i> contacto@vetexoticos.uy</a>
+    <a><i class="me-3 fa-solid fa-envelope"></i> contacto@vetexoticos.uy</a>
     <a><i class="me-3 fa-solid fa-location-dot"></i> Montevideo, Uruguay</a>
     <a href="tel:+59891210125"><i class="me-3 fa-solid fa-mobile"></i> 091 210 125</a>
 </div>
