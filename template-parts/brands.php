@@ -5,6 +5,7 @@ $images_names = array(
     'lilimascota' => 'lilimascota.png',
     'ferplast' => 'ferplast.png',
     'pawise' => 'pawise.png',
+    'brit' => 'brit.png',
 );
 
 $brands = get_terms(array(
