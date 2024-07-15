@@ -32,8 +32,8 @@ if (!empty($brands) && !is_wp_error($brands)) : ?>
                     // Construct the link to filter product by brand.
                     $brand_link = home_url('/tienda/?filter_marca=' . $term_slug . '&query_type_marca=or');
                 ?>
-                    <div class="col-sm-4 col-lg-2">
-                        <div class="brand-wrapper p-4">
+                    <div class="col" style="flex: 0 0 14.2857%;">
+                        <div class="brand-wrapper p-2">
                             <a href="<?php echo esc_url($brand_link); ?>">
                                 <img 
                                     width="100%" 
