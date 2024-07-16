@@ -580,6 +580,12 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantit
 
 .wp-block-woocommerce-checkout {
     padding: 7rem 0 !important;
+    
+    .wc-block-must-login-prompt {
+        a {
+            font-weight: 700;
+        }
+    }
 }
 
 .wc-block-components-form input,
@@ -815,7 +821,6 @@ nav.woocommerce-MyAccount-navigation {
         }
     }
 }
-
 
 .woocommerce-Address-title.title {
     a {
