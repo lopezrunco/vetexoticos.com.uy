@@ -1,6 +1,7 @@
 <?php
 
 // Define paths constants
+define('COMPANY_DATA_PATH', get_template_directory() . '/data/company.json');
 define('BRANDS_DATA_PATH', get_template_directory() . '/data/brands.json');
 define('NO_IMAGE_PLACEHOLDER', get_template_directory_uri() . '/assets/images/no-image-default.jpg');
 

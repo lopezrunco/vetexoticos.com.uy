@@ -1,3 +1,11 @@
+<?php
+require_once get_template_directory() . '/functions.php';
+if (file_exists(COMPANY_DATA_PATH)) {
+    $json_data = file_get_contents(COMPANY_DATA_PATH);
+    $company_data = json_decode($json_data, true);
+}
+?>
+
 <section class="bottom bg-primary">
     <article class="container">
         <div class="row">
@@ -10,14 +18,24 @@
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vetexoticos-inverted.jpg" alt="Vetexoticos logo">
                 </a>
-                <p>Somos una clínica dedicada exclusivamente a la atención médica y quirúrgica de animales de compañía no tradicionales.</p>
+                <p><?php echo get_bloginfo('description'); ?></p>
             </div>
             <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
                 <h4>Contacto</h4>
-                <a><i class="me-3 fa-solid fa-envelope"></i> contacto@vetexoticos.uy</a>
-                <a href="tel:+59891210125"><i class="me-3 fa-solid fa-mobile"></i> 091 210 125</a>
-                <a href="https://m.facebook.com/dra.carinaesteves/" target="_blank"><i class="fa-brands me-3 fa-facebook"></i> @dra.carinaesteves</a>
-                <a href="https://www.instagram.com/vetexoticos.uy/" target="_blank"><i class="fa-brands me-3 fa-instagram"></i> vetexoticos.uy</a>
+                <a><i class="me-3 fa-solid fa-envelope"></i> <?php echo $company_data['email'] ?></a>
+
+                <?php 
+                foreach ($company_data['social'] as $social_item) {
+                    ?>
+                    <a 
+                        href="<?php echo esc_url($social_item['link']); ?>" 
+                        target="_blank">
+                            <i class="me-3 <?php echo esc_attr($social_item['icon']) ?>"></i> 
+                            <?php echo esc_html($social_item['nickname']); ?>
+                    </a>
+                    <?php
+                }
+                ?>
             </div>
             <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
                 <h4>Asociados a</h4>

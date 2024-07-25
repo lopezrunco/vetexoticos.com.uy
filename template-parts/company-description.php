@@ -11,7 +11,7 @@
                 <div class="quote border-radius mb-4">
                     <i class="fa-solid fa-quote-left quotes-icon"></i>
                     <h5>
-                        Somos una clínica dedicada exclusivamente a la atención médica y quirúrgica de animales de compañía no tradicionales.
+                        <?php echo get_bloginfo('description'); ?>
                     </h5>
                 </div>
             </div>
