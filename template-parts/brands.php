@@ -1,8 +1,9 @@
 <?php
 // Obtain & decode static data from JSON.
-$json_file_path = get_template_directory() . '/data/brands.json';
-if (file_exists($json_file_path)) {
-    $json_data = file_get_contents($json_file_path);
+require_once get_template_directory() . '/functions.php';
+
+if (file_exists(BRANDS_DATA_PATH)) {
+    $json_data = file_get_contents(BRANDS_DATA_PATH);
     $images_names = json_decode($json_data, true); // "True" to decode as Associative array instead of an Object. 
 } else {
     $images_names = array();
@@ -13,7 +14,7 @@ $brands = get_terms(array(
     'hide_empty' => false
 ));
 
-$no_image_placeholder = get_template_directory_uri() . '/assets/images/no-image-default.jpg';
+$no_image_placeholder = NO_IMAGE_PLACEHOLDER;
 
 function get_brand_data($brand, $images_names, $no_image_placeholder) {
     $term_slug = $brand->slug;

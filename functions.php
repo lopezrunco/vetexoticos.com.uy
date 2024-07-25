@@ -1,5 +1,9 @@
 <?php
 
+// Define paths constants
+define('BRANDS_DATA_PATH', get_template_directory() . '/data/brands.json');
+define('NO_IMAGE_PLACEHOLDER', get_template_directory_uri() . '/assets/images/no-image-default.jpg');
+
 function starterwptheme_theme_support()
 {
     add_theme_support('title-tag');
