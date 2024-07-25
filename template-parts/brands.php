@@ -1,13 +1,12 @@
 <?php
-$images_names = array(
-    'tiendanimal' => 'tiendanimal.png',
-    'deribal' => 'deribal.png',
-    'lilimascota' => 'lilimascota.png',
-    'ferplast' => 'ferplast.png',
-    'pawise' => 'pawise.png',
-    'brit' => 'brit.png',
-    'nilda' => 'nilda.jpeg'
-);
+// Obtain & decode static data from JSON.
+$json_file_path = get_template_directory() . '/data/brands.json';
+if (file_exists($json_file_path)) {
+    $json_data = file_get_contents($json_file_path);
+    $images_names = json_decode($json_data, true); // "True" to decode as Associative array instead of an Object. 
+} else {
+    $images_names = array();
+}
 
 $brands = get_terms(array(
     'taxonomy' => 'pa_marca',
@@ -15,6 +14,20 @@ $brands = get_terms(array(
 ));
 
 $no_image_placeholder = get_template_directory_uri() . '/assets/images/no-image-default.jpg';
+
+function get_brand_data($brand, $images_names, $no_image_placeholder) {
+    $term_slug = $brand->slug;
+    $image_name = isset($images_names[$term_slug]) ? $images_names[$term_slug] : null;
+    $image_url = $image_name ? get_template_directory_uri() . '/assets/images/brands/' . $image_name : $no_image_placeholder;
+    // Construct the link to filter product by brand.
+    $brand_link = home_url('/tienda/?filter_marca=' . $term_slug . '&query_type_marca=or');
+
+    return array(
+        'image_url' => $image_url,
+        'brand_link' => $brand_link,
+        'brand_name' => $brand->name,
+    );
+}
 
 if (!empty($brands) && !is_wp_error($brands)) : ?>
     <!-- Desktop Version (Grid Layout) -->
@@ -27,20 +40,16 @@ if (!empty($brands) && !is_wp_error($brands)) : ?>
             </div>
             <div class="row">
                 <?php foreach ($brands as $brand) :
-                    $term_slug = $brand->slug;
-                    $image_name = isset($images_names[$term_slug]) ? $images_names[$term_slug] : null;
-                    $image_url = $image_name ? get_template_directory_uri() . '/assets/images/brands/' . $image_name : $no_image_placeholder;
-                    // Construct the link to filter product by brand.
-                    $brand_link = home_url('/tienda/?filter_marca=' . $term_slug . '&query_type_marca=or');
+                    $brand_data = get_brand_data($brand, $images_names, $no_image_placeholder);
                 ?>
                     <div class="col" style="flex: 0 0 14.2857%;">
                         <div class="brand-wrapper p-2">
-                            <a href="<?php echo esc_url($brand_link); ?>">
+                            <a href="<?php echo esc_url($brand_data['brand_link']); ?>">
                                 <img 
                                     width="100%" 
                                     class="border-radius box-shadow" 
-                                    src="<?php echo esc_url($image_url); ?>" 
-                                    alt="<?php echo esc_attr($brand->name); ?>" 
+                                    src="<?php echo esc_url($brand_data['image_url']); ?>" 
+                                    alt="<?php echo esc_attr($brand_data['brand_name']); ?>" 
                                 />
                             </a>
                         </div>
@@ -61,17 +70,14 @@ if (!empty($brands) && !is_wp_error($brands)) : ?>
             <div id="brandCarouselMobile" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner py-5">
                     <?php foreach ($brands as $index => $brand) :
-                        $term_slug = $brand->slug;
-                        $image_name = isset($images_names[$term_slug]) ? $images_names[$term_slug] : null;
-                        $image_url = $image_name ? get_template_directory_uri() . '/assets/images/brands/' . $image_name : $no_image_placeholder;
-                        $brand_link = home_url('/tienda/?filter_marca=' . $term_slug . '&query_type_marca=or');
+                        $brand_data = get_brand_data($brand, $images_names, $no_image_placeholder);
                     ?>
                         <div class="carousel-item px-5 <?php echo $index === 0 ? 'active' : ''; ?>">
-                            <a href="<?php echo esc_url($brand_link); ?>">
+                            <a href="<?php echo esc_url($brand_data['brand_link']); ?>">
                                 <img 
                                     class="d-block w-100 border-radius box-shadow" 
-                                    src="<?php echo esc_url($image_url); ?>" 
-                                    alt="<?php echo esc_attr($brand->name); ?>" 
+                                    src="<?php echo esc_url($brand_data['image_url']); ?>" 
+                                    alt="<?php echo esc_attr($brand_data['brand_name']); ?>" 
                                 />
                             </a>
                         </div>

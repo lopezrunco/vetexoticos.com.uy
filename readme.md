@@ -177,6 +177,58 @@ Leave the content area blank or add a brief description for reference and publis
     sass --watch scss/style.scss style.css
 ```
 
+## JSON Abstraction of static content:
+
+### Purpose:
+I store static data in a JSON files located in the theme's data directory. This allows for easy management and retrieval of data without hardcoding in PHP files.
+
+Please note that the JSON data files are not included in the GitHub project. You will need to create these files manually in the `data` directory of the theme. Ensure the JSON files are structured accordingly:
+
+### Files:
+
+brands.json
+```json
+{
+    "brandname": "brandname.png",
+    ... Add more as you need.
+}
+```
+
+pet-hotel.json
+```json
+[
+    {
+        "title": "Lorem ipsum",
+        "description": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."]
+    },
+    ... Add more as you need.
+]
+```
+
+services.json
+```json
+[
+    {
+        "title": "Lorem ipsum",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "icon": "fa-solid fa-bone"
+    },
+    ... Add more as you need.
+]
+```
+
+testimonials.json
+```json
+[
+    {
+        "name": "DJohn Doe",
+        "testimonial": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
+        "avatarSrc": "/assets/images/client-1.jpg"
+    },
+    ... Add more as you need.
+]
+```
+
 ## Roadmap:
 
 ### Template Development
@@ -204,7 +256,7 @@ Leave the content area blank or add a brief description for reference and publis
 - [ ] Address Feedback and Bug Fixes
 
 ## Future Enhancements:
-- [ ] Integration with MercadoPago
+- [X] Integration with MercadoPago
 - [ ] Implement Custom Widgets for Product Recommendations
 - [ ] Develop Advanced Filtering and Sorting Options
 - [ ] Incorporate Social Media Sharing Features
