@@ -8,11 +8,11 @@
 
 get_header();
 
-$json_file = get_template_directory() . '/data/services.json';
+require_once get_template_directory() . '/functions.php';
 
-if ( file_exists( $json_file ) ) {
+if (file_exists(SERVICES_DATA_PATH)) {
     // Read JSON and decode the JSON file into an array of objetcs.
-    $json_data = file_get_contents( $json_file ); 
+    $json_data = file_get_contents(SERVICES_DATA_PATH); 
     $services = json_decode( $json_data );
     
     // If decoding was successful loop and generate the HTML.
