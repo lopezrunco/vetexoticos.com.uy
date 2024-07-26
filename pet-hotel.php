@@ -13,7 +13,8 @@ $json_file = get_template_directory() . '/data/pet-hotel.json';
 if (file_exists($json_file)) {
     // Read JSON and decode the JSON file into an array of objects.
     $json_data = file_get_contents($json_file);
-    $faq_hotel = json_decode($json_data);
+    $json_decoded = json_decode($json_data, true); // Decode as an associative array.
+    $faq_hotel = $json_decoded['accordion'];
 
     // If decoding was successful loop and generate the HTML.
     if ($faq_hotel !== null) {
@@ -25,11 +26,12 @@ if (file_exists($json_file)) {
                         <h2>¿Te vas de vacaciones?</h2>
                         <h2>¡Cuidamos de tu mejor amigo!</h2>
                         <p class="mt-4 mb-5">Contamos con guardería para tu animal de compañía no tradicional, cumpliendo las necesidades de cada especie.</p>
-                        <h4>Preguntas frecuentes:</h4>
+                        
                     </div>
                 </div>
                 <div class="row mb-5">
-                    <div class="col-12">
+                    <div class="col-12 col-lg-8 mb-5">
+                        <h4 class="mb-4">Preguntas frecuentes:</h4>
                         <div class="accordion" id="accordionExample">
                             <?php
                             $index = 1;
@@ -37,18 +39,18 @@ if (file_exists($json_file)) {
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading<?php echo $index; ?>">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $index; ?>" aria-expanded="false" aria-controls="collapse<?php echo $index; ?>">
-                                            <?php echo esc_html($faq->title); ?>
+                                            <?php echo esc_html($faq['title']); ?>
                                         </button>
                                     </h2>
                                     <div id="collapse<?php echo $index; ?>" class="accordion-collapse collapse" aria-labelledby="heading<?php echo $index; ?>" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <?php
-                                            if (is_array($faq->description)) {
-                                                foreach ($faq->description as $desc) {
+                                            if (is_array($faq['description'])) {
+                                                foreach ($faq['description'] as $desc) {
                                                     echo '<p>' . $desc . '</p>';
                                                 }
                                             } else {
-                                                echo '<p>' . $faq->description . '</p>';
+                                                echo '<p>' . $faq['description'] . '</p>';
                                             }
                                             ?>
                                         </div>
@@ -58,6 +60,9 @@ if (file_exists($json_file)) {
                                 $index++;
                             endforeach; ?>
                         </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <?php get_template_part('template-parts/vertical-slider'); ?>
                     </div>
                 </div>
             </div>
