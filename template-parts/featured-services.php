@@ -1,15 +1,14 @@
 <?php
-$json_file = get_template_directory() . '/data/services.json';
+require_once get_template_directory() . '/functions.php';
 
-if (file_exists($json_file)) {
-	$json_data = file_get_contents($json_file);
+if (file_exists(SERVICES_DATA_PATH)) {
+	$json_data = file_get_contents(SERVICES_DATA_PATH);
 	$services = json_decode($json_data);
 	$services_per_page = 4;
 
 	// Randomize the order of the services array and select a few of them.
 	shuffle($services);
 	$selected_services = array_slice($services, 0, $services_per_page);
-
 ?>
 
 	<section class="featured-services bg-primary">
@@ -31,6 +30,6 @@ if (file_exists($json_file)) {
 
 <?php
 } else {
-	echo '<p>Hubo un error al cargar los servicios.</p>';
+	echo '<p>Ocurrió un error al cargar los servicios.</p>';
 }
 ?>
