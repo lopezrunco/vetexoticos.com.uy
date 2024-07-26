@@ -1,5 +1,11 @@
 <?php
-/* Template Name: Contact */
+
+/**
+ * Template Name: Contact
+ * 
+ * @package Vetexoticos WP Theme
+ */
+
 get_header();
 ?>
 

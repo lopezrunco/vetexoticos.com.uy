@@ -24,24 +24,25 @@ if (file_exists(COMPANY_DATA_PATH)) {
                 <h4>Contacto</h4>
                 <a><i class="me-3 fa-solid fa-envelope"></i> <?php echo $company_data['email'] ?></a>
 
-                <?php 
+                <?php
                 foreach ($company_data['social'] as $social_item) {
-                    ?>
-                    <a 
-                        href="<?php echo esc_url($social_item['link']); ?>" 
-                        target="_blank">
-                            <i class="me-3 <?php echo esc_attr($social_item['icon']) ?>"></i> 
-                            <?php echo esc_html($social_item['nickname']); ?>
+                ?>
+                    <a href="<?php echo esc_url($social_item['link']); ?>" target="_blank">
+                        <i class="me-3 <?php echo esc_attr($social_item['icon']) ?>"></i>
+                        <?php echo esc_html($social_item['nickname']); ?>
                     </a>
-                    <?php
+                <?php
                 }
                 ?>
             </div>
             <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
                 <h4>Asociados a</h4>
                 <div class="members overflow-hidden d-flex justify-content-start align-items-start">
-                    <img class="h-auto object-fit-container border-radius me-3" width="100" src="<?php echo get_template_directory_uri(); ?>/assets/images/members/aemv.jpg" alt="AEMV logo" />
-                    <img class="h-auto object-fit-container border-radius" width="100" src="<?php echo get_template_directory_uri(); ?>/assets/images/members/aav.jpg" alt="AAV logo" />
+                    <?php
+                    foreach ($company_data['members'] as $member) {
+                    ?>
+                        <img class="h-auto object-fit-container border-radius me-3" width="100" src="<?php echo get_template_directory_uri(); ?>/assets/images/members/<?php echo esc_html($member['imgName']) ?>" alt="<?php echo esc_attr($member['title']) ?>" />
+                    <?php } ?>
                 </div>
             </div>
             <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
