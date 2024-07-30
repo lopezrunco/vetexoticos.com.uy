@@ -833,3 +833,10 @@ nav.woocommerce-MyAccount-navigation {
 .woocommerce-Address address {
     white-space: nowrap !important;
 }
+
+/* Hide free delivery options */
+.wc-block-components-shipping-address,
+.wc-block-components-totals-shipping__fieldset,
+.wc-block-checkout__shipping-option--free {
+   display: none !important;
+}
