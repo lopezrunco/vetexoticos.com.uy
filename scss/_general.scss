@@ -317,6 +317,19 @@ header.content-header {
     }
 }
 
+.no-stock {
+    position: relative;
+    width: 100%;
+    font-size: .8rem;
+    padding: .5rem;
+    border-radius: var(--border-radius);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    text-transform: uppercase;
+    background: var(--light-primary);
+    color: var(--white);
+}
+
 @media screen and (min-width: 1200px) {
     .quote {
         width: 80%;

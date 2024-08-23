@@ -105,6 +105,7 @@ ul.products.columns-4 {
 ul.products.columns-4 li.product {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    height: fit-content;
 }
 
 ul.products.columns-4 li.product a img {
@@ -156,8 +157,10 @@ ul.products.columns-4 li.product .onsale,
     background-color: var(--danger);
     color: var(--white);
     padding: .3rem .7rem;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     margin: .3rem;
+    font-size: .8rem;
+    text-transform: uppercase;
 }
 
 p.woocommerce-result-count,
@@ -682,8 +685,10 @@ section.related.products .onsale {
     background-color: var(--danger);
     color: var(--white);
     padding: .3rem .7rem;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     margin: .3rem;
+    font-size: .8rem;
+    text-transform: uppercase;
 }
 
 section.related.products .price {
