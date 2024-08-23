@@ -228,37 +228,3 @@ testimonials.json
     ... Add more as you need.
 ]
 ```
-
-## Roadmap:
-
-### Template Development
-- [X] Design Standard Pages Layout
-- [X] Customize Woocomerce styles
-- [X] Style Search Results Page
-- [X] Develop Custom Header and Footer
-
-### WooCommerce Integration
-- [X] Integrate WooCommerce Functions
-- [X] Configure Product Variation Display
-- [ ] Implement Product Filtering Options
-- [ ] Implement Wishlist and Compare Features
-
-### Design & Styling
-- [X] Implement Responsive Design for Mobile Devices
-- [X] Ensure Cross-Browser Compatibility
-- [ ] Optimize Loading Speeds for Improved Performance
-- [ ] Implement Accessibility Features
-
-### Quality Assurance & Deployment
-- [ ] Review and Optimize Codebase
-- [ ] Conduct User Testing
-- [ ] Ensure Compatibility with Latest WooCommerce Versions
-- [ ] Address Feedback and Bug Fixes
-
-## Future Enhancements:
-- [X] Integration with MercadoPago
-- [ ] Implement Custom Widgets for Product Recommendations
-- [ ] Develop Advanced Filtering and Sorting Options
-- [ ] Incorporate Social Media Sharing Features
-- [ ] Enhance User Account Dashboard Features
-- [ ] Implement Advanced Analytics for Sales Tracking
