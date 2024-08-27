@@ -57,7 +57,15 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item_title' );
 
 	if (!$product->is_in_stock()) {
-		echo '<span class="no-stock">Sin stock</span>'; 
+		echo '
+		<a
+			href="https://api.whatsapp.com/send/?phone=59891210125&text=Hola%2C+quisiera+consultar+sobre+el+producto+' . $product->get_title() . '&type=phone_number&app_absent=0"
+			target="_blank">
+				<span class="no-stock">
+					Consulte stock
+				</span>
+			</a>
+		';
 	}
 
 	/**

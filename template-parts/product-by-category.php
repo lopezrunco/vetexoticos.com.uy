@@ -35,9 +35,11 @@
 							<h5><?php echo $product->get_name(); ?></h5>
 							<span class="price"><?php echo $product->get_price_html(); ?></span>
 						</a>
-						<?php if (!$product->is_in_stock()) : ?>
-							<span class="no-stock">Sin stock</span>
-						<?php endif; ?>
+						<?php 
+							if (!$product->is_in_stock()) {
+								include 'no-stock.php';
+							}; 
+						?>
 					</div>
 				</div>
 			<?php
@@ -59,9 +61,11 @@
 										<h5><?php echo $product->get_name(); ?></h5>
 										<span class="price"><?php echo $product->get_price_html(); ?></span>
 									</a>
-									<?php if (!$product->is_in_stock()) : ?>
-										<span class="no-stock">Sin stock</span>
-									<?php endif; ?>
+									<?php 
+										if (!$product->is_in_stock()) {
+											include 'no-stock.php';
+										}; 
+									?>
 								</div>
 							</div>
 						</div>
