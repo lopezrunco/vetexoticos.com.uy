@@ -5,8 +5,8 @@ get_template_part('template-parts/whatsapp-link');
 
 <footer class="footer text-center py-3 theme-bg-dark">
     <small>
-        <?php echo get_bloginfo('name'); ?> © Copyright <?php echo date("Y"); ?> | Todos los derechos reservados |
-        Desarrollo: <a class="developer" href="https://github.com/lopezrunco" target="_blank">Tecnomedios</a>
+        <?php echo get_bloginfo('name'); ?> Copyright © <?php echo date("Y"); ?> | Todos los derechos reservados |
+        Desarrollo: <a class="developer" href="https://tecmedios.com" target="_blank">Tecmedios</a>
     </small>
     <?php dynamic_sidebar('footer-1'); ?>
 </footer>
