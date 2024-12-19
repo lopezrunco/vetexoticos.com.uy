@@ -110,7 +110,7 @@ ul.products.columns-4 li.product {
 
 ul.products.columns-4 li.product a img {
     width: 100%;
-    height: 350px;
+    height: auto;
     object-fit: cover;
     object-position: center;
     border-top-left-radius: var(--border-radius);
@@ -662,7 +662,7 @@ section.related.products ul li {
 
 section.related.products ul img {
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
