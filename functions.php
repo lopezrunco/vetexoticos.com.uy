@@ -161,3 +161,73 @@ function custom_search_form( $form ) {
     return $form;
 }
 add_filter( 'get_search_form', 'custom_search_form' );
+
+function display_bag_popup_on_cart_page() {
+    if (is_cart()) {
+        $bag_product_id = 38; // To replace in production.
+        $bag_in_cart = false;
+
+        // WC() function return the Wocommerce object.
+        // cart is a property returned by WC().
+        // get_cart() returns the current items in the cart to be iterated by the loop.
+        foreach (WC() -> cart -> get_cart() as $cart_item) {
+            if ($cart_item['product_id'] == $bag_product_id) {
+                $bag_in_cart = true;
+                break;
+            }
+        }
+
+        if (!$bag_in_cart) {
+            echo '<div class="bag-popup">
+                    <a href="#" class="add-bag-button" data-product-id="' . esc_attr($bag_product_id) . '">    
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <small>Incluir bolsa</small>
+                    </a>
+                </div>';
+        }
+    }
+}
+
+add_action('wp_footer', 'display_bag_popup_on_cart_page');
+
+function add_bag_to_cart() {
+    // Check if the $_POST request contains a valid product_id parameter.
+    if (isset($_POST['product_id']) && is_numeric($_POST['product_id'])) {
+        $product_id = intval($_POST['product_id']); // Convert the product_id to integer for security.
+
+        // Add product to the cart.
+        if (WC() -> cart -> add_to_cart($product_id)) {
+            wp_send_json_success(); // Send success response.
+        } else {
+            wp_send_json_error(); // Send error response.
+        }
+    } else {
+        wp_send_json_error();
+    }
+    wp_die(); // Finish the AJAX request.
+}
+
+add_action('wp_ajax_add_bag_to_cart', 'add_bag_to_cart');
+add_action('wp_ajax_nopriv_add_bag_to_cart', 'add_bag_to_cart'); // For non logged users.
+
+function enqueue_bag_popup_script() {
+    if (is_cart()) {
+        // wp_enqueue_script is a Wordpress function to add JS to the page.
+        wp_enqueue_script(
+            'bag-popup-script',
+            get_stylesheet_directory_uri() . '/js/bag-popup.js',
+            array(), // The script does not rely on other dependencies.
+            null, // No script version number.
+            true // Specifies the script should be loaded in the footer (true) and not in the header (false).
+        );
+
+        // The wp_localize_script() function allows to pass dynamic data to the JS file.
+        wp_localize_script(
+            'bag-popup-script',
+            'wc_ajax_params', // JS object that will be created in the JS file, like a container for the data.
+            array('ajax_url' => WC() -> ajax_url()) // Returns an associative array with the 'ajax_url' and the Woocommerce function that return the URL for AJAX requests.
+        );
+    }
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_bag_popup_script');

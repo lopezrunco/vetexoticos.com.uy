@@ -1,0 +1,19 @@
+.bag-popup {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1rem;
+    background-color: var(--light-whatsapp);
+    border-radius: 5px;
+    transition: var(--main-transition);
+    
+    &:hover,
+    &:active {
+        background-color: var(--dark-whatsapp);
+    }
+    
+    a.add-bag-button {
+        display: inline-block;
+        padding: 1rem;
+        color: var(--white) !important;
+    }
+}
