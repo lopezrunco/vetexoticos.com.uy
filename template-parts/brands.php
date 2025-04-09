@@ -43,7 +43,7 @@ if (!empty($brands) && !is_wp_error($brands)) : ?>
                 <?php foreach ($brands as $brand) :
                     $brand_data = get_brand_data($brand, $images_names, $no_image_placeholder);
                 ?>
-                    <div class="col" style="flex: 0 0 14.2857%;">
+                    <div class="col" style="flex: 0 0 12.5%;">
                         <div class="brand-wrapper p-2">
                             <a href="<?php echo esc_url($brand_data['brand_link']); ?>">
                                 <img 
