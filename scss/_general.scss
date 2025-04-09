@@ -336,3 +336,8 @@ header.content-header {
         padding: 4rem 6rem;
     }
 }
+
+// Hide free shipping options in cart.
+.wc-block-components-totals-shipping {
+	display: none !important;
+}
