@@ -531,7 +531,7 @@ form.woocommerce-ordering select.orderby {
 /* Cart page */
 
 .wp-block-woocommerce-cart.alignwide {
-    padding: 7rem 0;
+    padding: 7rem 0 0;
 }
 
 .editor-styles-wrapper table.wc-block-cart-items .wc-block-cart-items__header,

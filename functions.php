@@ -164,7 +164,7 @@ add_filter( 'get_search_form', 'custom_search_form' );
 
 function display_bag_popup_on_cart_page() {
     if (is_cart()) {
-        $bag_product_id = 38; // To replace in production.
+        $bag_product_id = 38; // Replace in production for 1117.
         $bag_in_cart = false;
 
         // WC() function return the Wocommerce object.
@@ -178,22 +178,27 @@ function display_bag_popup_on_cart_page() {
         }
 
         if (!$bag_in_cart) {
-            echo '<div class="bag-popup">
-                    <a href="#" class="add-bag-button" data-product-id="' . esc_attr($bag_product_id) . '">    
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <small>Incluir bolsa</small>
-                    </a>
+            echo '<div class="container">
+                    <div class="bag-popup">
+                        <a href="#" class="add-bag-button" data-product-id="' . esc_attr($bag_product_id) . '">    
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/bag.png" alt="Bolsa" />
+                            <p>¿Deseas incluir una bolsa?</p>
+                        </a>
+                    </div>
                 </div>';
         }
     }
 }
 
-add_action('wp_footer', 'display_bag_popup_on_cart_page');
+add_action('get_footer', 'display_bag_popup_on_cart_page');
 
 function add_bag_to_cart() {
     // Check if the $_POST request contains a valid product_id parameter.
     if (isset($_POST['product_id']) && is_numeric($_POST['product_id'])) {
         $product_id = intval($_POST['product_id']); // Convert the product_id to integer for security.
+
+        // TODO: Add a loader or block the screen during the waiting.
 
         // Add product to the cart.
         if (WC() -> cart -> add_to_cart($product_id)) {
