@@ -635,6 +635,16 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantit
     padding: 2rem 0;
 }
 
+.woocommerce-column--billing-address,
+.woocommerce-column--shipping-address {
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.woocommerce .woocommerce-customer-details address {
+    border: none;
+}
+
 /* Related products section */
 
 section.related.products {
