@@ -1,5 +1,5 @@
 <section class="product-categories bg-light">
-	<article class="container">
+	<article class="container fade-in delay-level2">
 		<?php
 		$parent_category = get_term_by('name', 'Especie', 'product_cat');
 

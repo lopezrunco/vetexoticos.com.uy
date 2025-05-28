@@ -1,7 +1,7 @@
 <div class="why-us bg-primary text-light">
     <div class="paws-overlay">
         <div class="dark-gradient-overlay">
-            <section class="container">
+            <section class="container fade-in delay-level2">
                 <article class="row">
                     <div class="col-lg-6 mb-5">
                         <h2 class="text-light mb-4"><?php echo esc_html($wu_left_subtitle); ?></h2>

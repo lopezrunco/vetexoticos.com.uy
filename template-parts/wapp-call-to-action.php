@@ -1,5 +1,5 @@
 <section class="call-to-action-wapp">
-    <article class="container">
+    <article class="container fade-in delay-level2">
         <div class="row">
             <div class="col-lg-6">
                 <h2>Esperamos haber aclarado todas tus dudas :)</h2>

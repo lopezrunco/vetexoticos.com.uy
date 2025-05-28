@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <section class="pet-hotel-page pb-0">
-    <div class="container">
+    <div class="container fade-in delay-level2">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 text-center mb-5">
                 <h2>¿Te vas de vacaciones?</h2>

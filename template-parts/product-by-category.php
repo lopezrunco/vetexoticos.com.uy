@@ -1,5 +1,5 @@
 <section class="product-grid">
-	<article class="container">
+	<article class="container fade-in delay-level2">
 		<?php
 		$category_slug = 'Aves';
 		$category = get_term_by('slug', $category_slug, 'product_cat');

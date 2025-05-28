@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <section>
-    <article class="container">
+    <article class="container fade-in delay-level2">
         <div class="row">
             <div class="col-lg-4 mb-5">
                 <?php get_template_part('template-parts/contact-info'); ?>

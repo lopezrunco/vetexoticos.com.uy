@@ -30,7 +30,7 @@
 <body>
     <header class="fixed-top">
         <div class="top">
-            <div class="container">
+            <div class="container fade-in delay-level1">
                 <div class="row">
                     <div class="col-6">
                         <small>
@@ -53,7 +53,7 @@
         </div>
 
         <nav class="navbar  navbar-expand-xl bg-primary py-lg-0">
-            <div class="container">
+            <div class="container fade-in delay-level2">
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
                     <img class="main-logo" alt="Logo de Vetexoticos.uy" src="<?php echo get_template_directory_uri(); ?>/assets/images/vetexoticos-inverted.jpg" />
                 </a>
@@ -121,7 +121,7 @@
     <div class="main-wrapper">
         <?php if (!is_front_page() && !is_404()) : ?>
             <header class="page-title">
-                <h2 class="heading">
+                <h2 class="heading fade-in delay-level2">
                     <?php
                         if (function_exists('is_shop') && is_shop()) {
                             echo 'Tienda';

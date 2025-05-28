@@ -19,7 +19,7 @@ if (file_exists(SERVICES_DATA_PATH)) {
     if ( $services !== null ) {
 ?>
     <section class="services-page">
-        <article class="container">
+        <article class="container fade-in delay-level2">
             <div class="row">
                 <?php foreach( $services as $service ) : ?>
                     <div class="col-lg-4 mb-5">

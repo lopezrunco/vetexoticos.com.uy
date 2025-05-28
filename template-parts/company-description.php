@@ -1,5 +1,5 @@
 <section class="company-description">
-    <article class="container">
+    <article class="container fade-in delay-level2">
         <div class="row">
             <div class="col-12 col-lg-8 offset-lg-2">
                 <img 

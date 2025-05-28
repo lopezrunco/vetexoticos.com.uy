@@ -33,7 +33,7 @@ function get_brand_data($brand, $images_names, $no_image_placeholder) {
 if (!empty($brands) && !is_wp_error($brands)) : ?>
     <!-- Desktop Version (Grid Layout) -->
     <section class="brands-slider d-none d-lg-block">
-        <article class="container">
+        <article class="container fade-in delay-level2">
             <div class="row">
                 <div class="section-title">
                     <h2>Nuestras marcas</h2>

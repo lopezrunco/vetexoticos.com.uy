@@ -14,7 +14,7 @@ if (file_exists(SERVICES_DATA_PATH)) {
 	<section class="featured-services bg-primary">
 		<div class="paws-overlay">
 			<div class="dark-gradient-overlay">
-				<article class="container">
+				<article class="container fade-in delay-level2">
 					<div class="row m-0">
 						<?php foreach ($selected_services as $service) : ?>
 							<div class="col-lg-3 mb-5 mb-lg-0">
