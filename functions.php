@@ -191,7 +191,7 @@ function display_bag_popup_on_cart_page() {
     }
 }
 
-add_action('get_footer', 'display_bag_popup_on_cart_page');
+// add_action('get_footer', 'display_bag_popup_on_cart_page');
 
 function add_bag_to_cart() {
     // Check if the $_POST request contains a valid product_id parameter.
@@ -212,8 +212,8 @@ function add_bag_to_cart() {
     wp_die(); // Finish the AJAX request.
 }
 
-add_action('wp_ajax_add_bag_to_cart', 'add_bag_to_cart');
-add_action('wp_ajax_nopriv_add_bag_to_cart', 'add_bag_to_cart'); // For non logged users.
+// add_action('wp_ajax_add_bag_to_cart', 'add_bag_to_cart');
+// add_action('wp_ajax_nopriv_add_bag_to_cart', 'add_bag_to_cart'); // For non logged users.
 
 function enqueue_bag_popup_script() {
     if (is_cart()) {
@@ -235,4 +235,4 @@ function enqueue_bag_popup_script() {
     }
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_bag_popup_script');
+// add_action('wp_enqueue_scripts', 'enqueue_bag_popup_script');
