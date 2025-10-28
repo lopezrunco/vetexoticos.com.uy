@@ -2,6 +2,8 @@
 <html <?php language_attributes(); ?>>
 
 <head>
+    <!-- Google Tag Manager -->
+    <?php include get_template_directory() . '/config/gtm-head.php'; ?>
     <!-- Meta -->
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +30,9 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <?php include get_template_directory() . '/config/gtm-body.php'; ?>
+
     <header class="fixed-top">
         <div class="top">
             <div class="container fade-in delay-level1">
